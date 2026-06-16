@@ -1,0 +1,361 @@
+{
+  "schema_version": "1.0.0",
+  "stage": "00",
+  "system_id": "1FA2D1B3",
+  "session_id": "de0f2e5b-2ef1-43c3-b0c0-16f6e462ac38",
+  "created_at": "2026-06-16T22:57:53Z",
+  "input_source": "/mnt/data/ideia-inicial(1).md",
+  "original_idea": "O sistema é uma plataforma SaaS B2B multi-tenant enterprise para criação de sistemas utilizando inteligência artificial, onde empresas clientes transformam ideias iniciais em projetos estruturados, percorrem uma timeline de etapas configuráveis, executam assistentes de IA, geram documentos versionados, enviam arquivos e informações adicionais, reexecutam etapas com novo contexto e podem contratar especialistas humanos por hora conforme as habilidades exigidas em cada fase.\n\nA plataforma é administrada por um Superadministrador, que opera como camada máxima de governança do SaaS. Ele controla tenants, planos, assinaturas, funcionalidades, prompts, agentes de IA, modelos, templates, segurança, LGPD, auditoria, billing, feature flags, limites de uso, permissões e configurações globais. O arquivo de especificações define o Superadministrador como a camada mais alta de governança da plataforma multi-tenant, responsável por administração global, gestão de tenants, IA, templates, automações, monitoramento e parametrizações globais. \n\n\n---\n\n1. Conceito principal\n\nA plataforma funciona como uma fábrica inteligente de sistemas.\n\nO cliente acessa a plataforma, cria um novo sistema, descreve sua ideia inicial e pode anexar:\n\narquivos;\n\nimagens;\n\nPDFs;\n\nplanilhas;\n\ndocumentos;\n\nlinks;\n\náudios;\n\nvídeos;\n\nprints;\n\nreferências;\n\nmateriais técnicos;\n\npropostas;\n\ncontratos;\n\nfluxos existentes.\n\n\nApós o envio, o sistema cria um Projeto de Sistema e gera uma timeline de etapas previamente configurada pelo Superadministrador.\n\nCada etapa da timeline possui:\n\nobjetivo;\n\nordem;\n\nassistente de IA responsável;\n\nprompts associados;\n\nschema de entrada;\n\nschema de saída;\n\ndocumentos de entrada;\n\ndocumento de saída esperado;\n\nskills exigidas;\n\npermissões;\n\nregras de aprovação;\n\nregras de reexecução;\n\nlimites do plano;\n\nlogs;\n\nauditoria;\n\npossibilidade de contratação de especialista.\n\n\nO resultado final é uma documentação progressiva e rastreável do sistema, podendo incluir requisitos, módulos, regras de negócio, personas, fluxos, modelo de dados, arquitetura, integrações, backlog, protótipos, documentação técnica e preparação para desenvolvimento.\n\n\n---\n\n2. Natureza do produto\n\nO sistema combina vários tipos de produto em uma única plataforma:\n\n2.1 Plataforma de criação de sistemas com IA\n\nPermite criar sistemas a partir de linguagem natural, arquivos e contexto do cliente.\n\n2.2 Plataforma de orquestração de prompts\n\nPermite cadastrar prompts com entrada, saída, versão, modelo, parâmetros e validações.\n\n2.3 Plataforma de assistentes configuráveis\n\nPermite criar assistentes compostos por uma sequência ordenada de prompts.\n\n2.4 Motor de workflow por etapas\n\nPermite definir timelines com etapas configuráveis, dependências, documentos e estados.\n\n2.5 Plataforma documental\n\nGera documentos versionados, auditáveis e aprováveis.\n\n2.6 Marketplace de especialistas\n\nPermite contratar especialistas por skill, etapa, disponibilidade e valor/hora.\n\n2.7 Plataforma SaaS enterprise\n\nInclui multi-tenant, planos, assinaturas, billing, segurança, LGPD, auditoria, RBAC, ABAC, feature flags e controle de escopo.\n\n\n---\n\n3. Camadas operacionais\n\nA plataforma possui três grandes planos operacionais.\n\n\n---\n\n3.1 Control Plane Global\n\nÉ o plano global da plataforma, usado pelo Superadministrador.\n\nNesse plano, o Superadministrador controla:\n\ntenants;\n\nplanos;\n\nprodutos Stripe;\n\npreços Stripe;\n\nassinaturas;\n\nfuncionalidades;\n\npermissões;\n\nperfis;\n\nprompts;\n\nagentes de IA;\n\nmodelos de IA;\n\ntemplates;\n\ndocumentos LGPD;\n\nsegurança;\n\nauditoria;\n\nbilling;\n\nfeature flags;\n\nconfigurações globais;\n\nmonitoramento;\n\ncustos de IA;\n\nexecuções;\n\nespecialistas;\n\nintegrações.\n\n\nO arquivo define que o Superadministrador pode operar em Contexto Global ou em Tenant específico, permitindo administração global da plataforma ou operação contextualizada dentro de um tenant. \n\n\n---\n\n3.2 Tenant Administration Plane\n\nÉ o plano de administração de um tenant específico.\n\nPode ser usado por:\n\nadministrador do tenant;\n\nsuperadministrador em contexto de tenant;\n\noperador autorizado.\n\n\nNesse plano são gerenciados:\n\nusuários do tenant;\n\nempresas;\n\nfiliais;\n\nprojetos;\n\npermissões locais;\n\nassinatura;\n\nconsumo;\n\nconfigurações;\n\nintegrações;\n\ndocumentos;\n\nuso de IA;\n\nauditoria;\n\nLGPD do tenant;\n\nespecialistas contratados;\n\nlimites do plano.\n\n\n\n---\n\n3.3 Project Execution Plane\n\nÉ a área onde a empresa cliente cria e evolui sistemas.\n\nNesse plano, o cliente:\n\ncria novo sistema;\n\ninforma ideia inicial;\n\nenvia arquivos;\n\nacompanha timeline;\n\nexecuta etapas;\n\nreexecuta etapas;\n\nenvia novos dados em cada etapa;\n\naprova documentos;\n\nsolicita revisões;\n\ncontrata especialistas;\n\nrealiza pagamentos;\n\nbaixa documentos;\n\nacompanha histórico.\n\n\n\n---\n\n4. Usuários e papéis\n\n4.1 Superadministrador Master\n\nPossui controle total da plataforma.\n\nPode:\n\nacessar contexto global;\n\nacessar qualquer tenant;\n\nconfigurar planos;\n\nconfigurar IA;\n\ngerenciar prompts;\n\ngerenciar agentes;\n\nconfigurar segurança;\n\nacessar billing;\n\neditar templates;\n\npublicar documentos LGPD;\n\nver auditoria global;\n\nimpersonar tenants;\n\nsuspender contas;\n\ncontrolar feature flags.\n\n\n\n---\n\n4.2 Superadministrador Operacional\n\nResponsável pela operação diária.\n\nPode:\n\nacompanhar tenants;\n\nmonitorar execuções;\n\nver dashboards;\n\nconsultar logs;\n\natender suporte;\n\nadministrar configurações não críticas.\n\n\n\n---\n\n4.3 Superadministrador IA\n\nResponsável pela governança de IA.\n\nPode:\n\ncadastrar modelos;\n\ncadastrar agentes;\n\ncadastrar prompts;\n\nversionar prompts;\n\nacompanhar execuções;\n\nmonitorar tokens;\n\navaliar custos;\n\nrevisar erros;\n\nconfigurar segurança de IA.\n\n\n\n---\n\n4.4 Superadministrador Financeiro\n\nResponsável por billing e receita.\n\nPode:\n\nver assinaturas;\n\nver pagamentos;\n\nacompanhar inadimplência;\n\nprocessar upgrades;\n\nprocessar downgrades;\n\nconsultar Stripe;\n\ngerar relatórios financeiros.\n\n\n\n---\n\n4.5 Superadministrador Auditor\n\nPerfil somente leitura.\n\nPode:\n\nvisualizar logs;\n\nconsultar auditoria;\n\nacompanhar eventos críticos;\n\ngerar relatórios;\n\nverificar conformidade.\n\n\nO arquivo define perfis como Super Admin Master, Operacional, IA, Financeiro e Auditor. \n\n\n---\n\n4.6 Empresa cliente\n\nÉ a organização que contrata a plataforma para criar sistemas.\n\nPode:\n\ncriar projetos;\n\ncadastrar usuários;\n\nadministrar empresas e filiais;\n\ncontratar especialistas;\n\npagar horas;\n\naprovar documentos;\n\nacompanhar consumo;\n\nconsultar assinatura;\n\nbaixar entregáveis.\n\n\n\n---\n\n4.7 Usuário da empresa cliente\n\nPode atuar como:\n\ndono da conta;\n\nadministrador;\n\ngestor de projeto;\n\nanalista;\n\ncolaborador;\n\naprovador;\n\nfinanceiro;\n\nvisualizador.\n\n\n\n---\n\n4.8 Especialista\n\nProfissional humano que pode ser contratado por etapa.\n\nPode:\n\ncriar perfil;\n\ninformar skills;\n\ndefinir valor/hora;\n\ninformar disponibilidade;\n\naceitar convites;\n\nparticipar de etapas;\n\ncomentar documentos;\n\nenviar parecer;\n\nregistrar horas;\n\nreceber pagamento;\n\nser avaliado.\n\n\n\n---\n\n5. Fluxo principal do cliente\n\n5.1 Criação de novo sistema\n\nO cliente acessa a tela Novo Sistema.\n\nNessa tela ele pode informar:\n\nnome do sistema;\n\nideia inicial;\n\nproblema a resolver;\n\npúblico-alvo;\n\ntipo de sistema;\n\narquivos;\n\nlinks;\n\náudios;\n\nimagens;\n\ndocumentos complementares.\n\n\nO sistema cria um registro Project.\n\nEsse projeto recebe:\n\nid;\n\ntenant;\n\nempresa;\n\nfilial, se aplicável;\n\nusuário criador;\n\nnome;\n\nideia inicial;\n\narquivos iniciais;\n\nlinks iniciais;\n\nstatus;\n\ntimeline vinculada;\n\netapa atual;\n\nplano aplicado;\n\nlimites aplicáveis;\n\nauditoria.\n\n\n\n---\n\n5.2 Geração da timeline\n\nApós a criação do projeto, a plataforma seleciona uma timeline conforme:\n\ntipo de sistema;\n\nplano do cliente;\n\ntemplate escolhido;\n\nconfiguração global;\n\nconfiguração do tenant;\n\nfeature flags;\n\npermissões;\n\nmodelo de negócio.\n\n\nExemplos de templates de timeline:\n\nSaaS B2B;\n\nsistema interno;\n\naplicativo mobile;\n\nmarketplace;\n\nERP;\n\nCRM;\n\nplataforma educacional;\n\ne-commerce;\n\nsistema com IA;\n\nsistema multi-tenant;\n\nsistema para franquias;\n\nsistema para gestão operacional;\n\nsistema para automação de processos.\n\n\n\n---\n\n5.3 Exemplo de timeline padrão\n\nUma timeline completa pode conter:\n\n1. Registro da ideia inicial.\n\n\n2. Análise da ideia.\n\n\n3. Pesquisa de mercado.\n\n\n4. Expansão da visão do produto.\n\n\n5. Definição de público-alvo.\n\n\n6. Personas.\n\n\n7. Módulos do sistema.\n\n\n8. Funcionalidades.\n\n\n9. Requisitos funcionais.\n\n\n10. Requisitos não funcionais.\n\n\n11. Regras de negócio.\n\n\n12. Fluxos e jornadas.\n\n\n13. Matriz de permissões.\n\n\n14. Modelo de dados.\n\n\n15. Arquitetura técnica.\n\n\n16. Integrações.\n\n\n17. Estratégia de IA.\n\n\n18. Estratégia de segurança.\n\n\n19. Estratégia LGPD.\n\n\n20. Backlog.\n\n\n21. Estimativa técnica.\n\n\n22. Prototipação.\n\n\n23. Revisão por especialista.\n\n\n24. Documentação final.\n\n\n25. Preparação para desenvolvimento.\n\n\n26. Geração inicial do sistema.\n\n\n\n\n---\n\n6. Etapas da timeline\n\nCada etapa é uma unidade operacional de execução.\n\n6.1 Dados de uma etapa\n\nA etapa deve possuir:\n\nid;\n\nnome;\n\ncódigo;\n\ndescrição;\n\nordem;\n\ntipo;\n\nstatus;\n\nassistente vinculado;\n\nprompts usados;\n\nschema de entrada;\n\nschema de saída;\n\ndocumento de saída esperado;\n\narquivos permitidos;\n\nmídias permitidas;\n\nskills exigidas;\n\nskills recomendadas;\n\npermissões necessárias;\n\nplano mínimo;\n\nfeature flag necessária;\n\nlimite de execuções;\n\npermite especialista;\n\npermite reexecução;\n\npermite aprovação;\n\ndepende de etapa anterior;\n\nregras de bloqueio;\n\nregras de desbloqueio;\n\nauditoria.\n\n\n\n---\n\n6.2 Estados da etapa\n\nA etapa pode assumir os seguintes estados:\n\npendente;\n\nbloqueada;\n\ndisponível;\n\naguardando entrada;\n\naguardando execução;\n\nem execução;\n\nconcluída;\n\naprovada;\n\nreprovada;\n\nem revisão;\n\naguardando especialista;\n\nespecialista contratado;\n\naguardando pagamento;\n\naguardando aceite do especialista;\n\nerro de execução;\n\nerro de validação;\n\ncancelada.\n\n\n\n---\n\n6.3 Entrada da etapa\n\nO cliente pode enviar:\n\ntexto;\n\narquivos;\n\nimagens;\n\náudios;\n\nvídeos;\n\nlinks;\n\ncomentários;\n\ndocumentos;\n\nrespostas;\n\nobservações;\n\ndecisões;\n\nrestrições;\n\nalterações de escopo;\n\nexemplos;\n\nprints;\n\nreferências.\n\n\nEssas entradas são incorporadas ao contexto da etapa e utilizadas em nova execução ou reexecução.\n\n\n---\n\n6.4 Saída da etapa\n\nA saída pode ser:\n\nJSON;\n\nMarkdown;\n\nHTML;\n\nPDF;\n\nDOCX;\n\nplanilha;\n\nestrutura de backlog;\n\nschema técnico;\n\nespecificação textual;\n\ndocumentação final;\n\nartefato técnico;\n\nmodelo de dados;\n\ndocumentação de API;\n\nwireframe textual;\n\nproposta técnica.\n\n\n\n---\n\n6.5 Reexecução de etapa\n\nA reexecução ocorre quando o cliente envia nova informação ou solicita revisão.\n\nAntes de reexecutar, o sistema deve validar:\n\npermissão do usuário;\n\nescopo;\n\nstatus da etapa;\n\nlimite do plano;\n\nfeature habilitada;\n\nsaldo de uso;\n\ndocumentos anteriores;\n\narquivos novos;\n\nmotivo da reexecução;\n\nimpacto em etapas posteriores.\n\n\nAo reexecutar, o sistema cria nova versão do documento, registra logs e atualiza consumo.\n\n\n---\n\n7. Assistentes de IA\n\nO assistente é uma entidade configurável que executa uma função especializada.\n\n7.1 Definição\n\nUm assistente é composto por:\n\ndados gerais;\n\nobjetivo;\n\nmodelo padrão;\n\ntemperatura;\n\ncontext window;\n\nmax tokens;\n\nprompt base;\n\nlista de prompts;\n\nordem de execução;\n\nferramentas associadas;\n\nregras de entrada;\n\nregras de saída;\n\nversionamento;\n\nstatus.\n\n\nO arquivo define agentes IA como entidades autônomas configuráveis, com campos como nome, código, descrição, status, modelo padrão, temperatura, context window, max tokens e prompt base. \n\n\n---\n\n7.2 Exemplos de assistentes\n\nAssistente Alpha;\n\nAssistente de Pesquisa;\n\nAssistente de Produto;\n\nAssistente de Requisitos;\n\nAssistente de UX;\n\nAssistente de Arquitetura;\n\nAssistente de Banco de Dados;\n\nAssistente de Segurança;\n\nAssistente LGPD;\n\nAssistente de Integrações;\n\nAssistente de Backlog;\n\nAssistente de Documentação;\n\nAssistente de Código;\n\nAssistente de Revisão;\n\nAssistente de Validação.\n\n\n\n---\n\n7.3 Sequência de prompts\n\nUm assistente pode executar vários prompts em ordem.\n\nExemplo:\n\nAssistente de Requisitos\n ├── 1. Interpretar ideia\n ├── 2. Extrair objetivos\n ├── 3. Identificar usuários\n ├── 4. Gerar requisitos funcionais\n ├── 5. Gerar requisitos não funcionais\n ├── 6. Validar saída\n └── 7. Gerar documento final\n\nO resultado de um prompt pode alimentar o próximo.\n\n\n---\n\n8. Prompts\n\nO prompt é uma instrução versionada usada por assistentes.\n\n8.1 Campos do prompt\n\nCada prompt deve possuir:\n\nid;\n\ncódigo único;\n\nnome;\n\ndescrição;\n\ncategoria;\n\nversão;\n\nstatus;\n\nprovider;\n\nmodelo;\n\ntemperatura;\n\ntop p;\n\nfrequency penalty;\n\npresence penalty;\n\nmax tokens;\n\nseed;\n\ncontext window;\n\nmemória curta;\n\nmemória longa;\n\nknowledge base;\n\ntemplate de entrada;\n\ntemplate de saída;\n\nschema de entrada;\n\nschema de saída;\n\nferramentas associadas;\n\nAPIs;\n\nMCP servers;\n\nweb search;\n\nbanco de dados;\n\nvector DB;\n\nintegrações;\n\nhistórico;\n\nauditoria.\n\n\nO arquivo define o cadastro de prompt com informações gerais, configuração de modelo, contexto, template de entrada, template de saída, validações e ferramentas associadas. \n\n\n---\n\n8.2 Status do prompt\n\nDraft;\n\nAtivo;\n\nArquivado.\n\n\n\n---\n\n8.3 Versionamento\n\nTodo prompt deve ser versionado.\n\nQuando um prompt muda, execuções antigas continuam vinculadas à versão usada no momento da execução.\n\nIsso garante:\n\nrastreabilidade;\n\nauditoria;\n\ncomparação;\n\nreprodutibilidade;\n\nsegurança;\n\ngovernança.\n\n\n\n---\n\n8.4 Schema de entrada\n\nO schema de entrada define o contrato esperado pela IA.\n\nExemplo:\n\n{\n  \"project_id\": \"string\",\n  \"tenant_id\": \"string\",\n  \"initial_idea\": \"string\",\n  \"client_message\": \"string\",\n  \"previous_outputs\": [],\n  \"files\": [],\n  \"links\": [],\n  \"audio_transcriptions\": [],\n  \"step_context\": {},\n  \"business_constraints\": [],\n  \"required_output_format\": \"json\"\n}\n\n\n---\n\n8.5 Schema de saída\n\nO schema de saída define o formato obrigatório do resultado.\n\nExemplo:\n\n{\n  \"title\": \"string\",\n  \"summary\": \"string\",\n  \"sections\": [],\n  \"requirements\": [],\n  \"business_rules\": [],\n  \"risks\": [],\n  \"recommendations\": [],\n  \"next_steps\": []\n}\n\nO sistema deve validar a resposta da IA contra esse schema antes de aceitar o documento gerado.\n\n\n---\n\n9. Execuções de IA\n\nToda execução de IA deve ser registrada.\n\n9.1 Dados da execução\n\nA execução deve armazenar:\n\nexecution id;\n\ntenant;\n\nempresa;\n\nfilial;\n\nusuário;\n\nprojeto;\n\netapa;\n\nassistente;\n\nprompt;\n\nversão do prompt;\n\nmodelo;\n\nprovider;\n\ntemperatura;\n\ntokens;\n\nferramentas;\n\nprompt final enviado;\n\nentrada estruturada;\n\nsaída bruta;\n\nsaída validada;\n\ndocumento gerado;\n\ninput tokens;\n\noutput tokens;\n\ntotal tokens;\n\nlatência;\n\ntempo de execução;\n\ncusto;\n\nstatus;\n\nerros;\n\nretries;\n\nlogs.\n\n\nO arquivo define que as execuções devem registrar identificação, configuração utilizada, entrada, saída, métricas, logs, eventos, ferramentas chamadas, erros e retry. \n\n\n---\n\n9.2 Pipeline de execução\n\nAutenticação\n ↓\nAutorização\n ↓\nResolução de escopo\n ↓\nValidação do plano\n ↓\nValidação da funcionalidade\n ↓\nValidação de limite de uso\n ↓\nValidação LGPD e segurança\n ↓\nColeta de contexto\n ↓\nProcessamento de arquivos\n ↓\nTranscrição de áudio\n ↓\nExtração de texto\n ↓\nMontagem do input\n ↓\nValidação do schema de entrada\n ↓\nMontagem do prompt final\n ↓\nExecução do assistente\n ↓\nExecução dos prompts em ordem\n ↓\nValidação do schema de saída\n ↓\nGeração do documento\n ↓\nVersionamento\n ↓\nAuditoria\n ↓\nAtualização de consumo\n ↓\nLiberação da próxima etapa\n\n\n---\n\n10. Documentos gerados\n\nA plataforma deve gerar documentos estruturados, versionados e auditáveis.\n\n10.1 Tipos de documentos\n\nideia inicial registrada;\n\nanálise da ideia;\n\npesquisa de mercado;\n\nvisão do produto;\n\nrequisitos funcionais;\n\nrequisitos não funcionais;\n\nregras de negócio;\n\nmatriz de permissões;\n\npersonas;\n\njornadas;\n\nfluxos;\n\nmodelo de dados;\n\narquitetura técnica;\n\nintegrações;\n\nbacklog;\n\nestimativa;\n\nplano de execução;\n\ndocumentação final;\n\ncontrato técnico;\n\ndocumentação para desenvolvimento;\n\ndocumentação para geração de código.\n\n\n\n---\n\n10.2 Versionamento de documentos\n\nCada documento deve ter versões.\n\nCada versão deve registrar:\n\ndocumento;\n\nversão;\n\netapa;\n\nexecução;\n\nassistente;\n\nprompts usados;\n\nmodelo de IA;\n\nusuário solicitante;\n\nespecialista envolvido;\n\narquivos utilizados;\n\ndata de geração;\n\nstatus;\n\ncomentários;\n\naprovação;\n\nauditoria.\n\n\n\n---\n\n10.3 Status do documento\n\nrascunho;\n\ngerado;\n\nem revisão;\n\nrevisado por especialista;\n\naprovado;\n\nrejeitado;\n\narquivado;\n\nsubstituído.\n\n\n\n---\n\n11. Especialistas\n\nO módulo de especialistas permite participação humana dentro da timeline.\n\n11.1 Cadastro de especialista\n\nO especialista informa:\n\nnome;\n\ne-mail;\n\ntelefone;\n\nfoto;\n\nbio;\n\npaís;\n\nidioma;\n\nfuso horário;\n\nvalor/hora;\n\nskills;\n\nsenioridade;\n\nexperiência;\n\ncertificações;\n\nportfólio;\n\ndisponibilidade;\n\ndocumentos;\n\ndados de pagamento;\n\npreferências de trabalho.\n\n\n\n---\n\n11.2 Skills\n\nSkills são entidades administráveis.\n\nCampos recomendados:\n\nid;\n\ncódigo;\n\nnome;\n\ndescrição;\n\ncategoria;\n\ndomínio;\n\nnível;\n\nstatus;\n\nescopo;\n\nauditoria.\n\n\nExemplos:\n\nProduct Management;\n\nUX Design;\n\nUI Design;\n\nArquitetura;\n\nBackend;\n\nFrontend;\n\nMobile;\n\nDevOps;\n\nSegurança;\n\nLGPD;\n\nIA;\n\nBanco de Dados;\n\nStripe;\n\nMulti-tenant;\n\nSaaS;\n\nFlutter;\n\nNode.js;\n\nSupabase;\n\nFirebase.\n\n\n\n---\n\n11.3 Skills por etapa\n\nCada etapa pode exigir:\n\nskills obrigatórias;\n\nskills recomendadas;\n\nsenioridade mínima;\n\ncertificações;\n\nexperiência mínima;\n\nvalor/hora máximo;\n\ndisponibilidade.\n\n\n\n---\n\n11.4 Contratação de especialista\n\nFluxo:\n\nCliente acessa etapa\n ↓\nClica em Contratar Especialista\n ↓\nSistema identifica skills da etapa\n ↓\nSistema lista especialistas compatíveis\n ↓\nCliente seleciona especialista\n ↓\nCliente escolhe quantidade de horas\n ↓\nSistema calcula valor total\n ↓\nSistema aplica taxa da plataforma\n ↓\nCliente realiza pagamento\n ↓\nValor fica em custódia\n ↓\nEspecialista aceita\n ↓\nEspecialista trabalha na etapa\n ↓\nEspecialista registra horas e parecer\n ↓\nCliente aprova\n ↓\nPlataforma libera repasse\n\n\n---\n\n11.5 Pagamento por hora\n\nCálculo:\n\nvalor_total = valor_hora × quantidade_horas\n\nExemplo:\n\nR$ 250/h × 4 horas = R$ 1.000\n\nA plataforma pode aplicar:\n\ncomissão;\n\ntaxa de serviço;\n\nimpostos;\n\ntaxa de processamento;\n\nsplit de pagamento;\n\nretenção em custódia;\n\nrepasse após aprovação.\n\n\n\n---\n\n12. Planos, funcionalidades e limites\n\nO sistema deve possuir gestão de planos integrada a Stripe, feature flags, licenciamento e controle de consumo.\n\nO arquivo define que a gestão de planos controla comercialização, licenciamento, ativação de funcionalidades, limites operacionais e integração com cobrança, integrada ao Stripe e ao mecanismo interno de feature flags, licenciamento e consumo. \n\n\n---\n\n12.1 Plano\n\nCampos:\n\nid;\n\ncódigo;\n\nnome;\n\ndescrição;\n\nstatus;\n\ntipo do plano;\n\nStripe Product ID;\n\nStripe Price ID;\n\ntipo de cobrança;\n\nvalor;\n\nmoeda;\n\ntrial;\n\nordem de exibição;\n\ndestaque comercial;\n\ncriado em;\n\natualizado em.\n\n\n\n---\n\n12.2 Tipos de plano\n\nPlano pessoal\n\nVoltado para:\n\npessoa física;\n\nconsultor;\n\nprofissional autônomo;\n\nespecialista independente.\n\n\nLimites típicos:\n\n1 usuário;\n\n1 empresa;\n\n0 filiais;\n\n0 equipes.\n\n\nPlano empresarial\n\nVoltado para:\n\nempresas;\n\nfranquias;\n\nredes;\n\ngrupos econômicos;\n\nconsultorias;\n\nsoftware houses.\n\n\nLimites configuráveis:\n\nusuários;\n\nempresas;\n\nfiliais;\n\nequipes;\n\nperfis;\n\nintegrações;\n\nprojetos;\n\nexecuções de IA;\n\ntokens;\n\narmazenamento;\n\nespecialistas;\n\ndocumentos;\n\ntemplates;\n\nprompts privados.\n\n\n\n---\n\n12.3 Funcionalidade\n\nO plano não habilita apenas módulos. Ele habilita funcionalidades específicas.\n\nEstrutura:\n\nDomínio\n └── Módulo\n      └── Funcionalidade\n\nExemplo:\n\nProjetos\n └── Timeline\n      ├── Executar etapa\n      ├── Reexecutar etapa\n      ├── Enviar arquivo\n      ├── Enviar áudio\n      ├── Exportar documento\n      └── Contratar especialista\n\nO arquivo especifica que o plano deve habilitar funcionalidades específicas, e que cada funcionalidade pode possuir limites, como registros, operações, usuários, tokens e chamadas de API. \n\n\n---\n\n12.4 PlanFeature\n\nDefine:\n\nplano;\n\nfuncionalidade;\n\nhabilitada;\n\nlimite de registros;\n\nlimite de operações;\n\nlimite de usuários;\n\nlimite de tokens;\n\nlimite de armazenamento;\n\nlimite mensal;\n\nlimite diário;\n\nregra de bloqueio;\n\nmensagem de bloqueio.\n\n\n\n---\n\n13. Assinaturas e billing\n\nO módulo de assinaturas controla o ciclo de vida comercial dos tenants.\n\n13.1 Assinatura\n\nCada tenant possui uma assinatura vinculada.\n\nCampos:\n\nplano atual;\n\nStripe Customer ID;\n\nStripe Subscription ID;\n\npróxima cobrança;\n\nstatus da assinatura;\n\ndata de contratação;\n\ndata de renovação;\n\ndata de vencimento;\n\nciclo;\n\nvalor;\n\nhistórico.\n\n\n\n---\n\n13.2 Status de assinatura\n\nTRIAL\nACTIVE\nPAST_DUE\nUNPAID\nSUSPENDED\nCANCELED\nEXPIRED\n\n\n---\n\n13.3 Métricas financeiras\n\nO dashboard financeiro deve apresentar:\n\nMRR;\n\nARR;\n\nreceita total;\n\nreceita prevista;\n\nreceita recebida;\n\nreceita pendente;\n\nreceita perdida;\n\ntotal de assinaturas;\n\nassinaturas ativas;\n\nassinaturas trial;\n\nassinaturas suspensas;\n\nassinaturas canceladas;\n\ninadimplência;\n\nnovos clientes;\n\nupgrades;\n\ndowngrades;\n\ncancelamentos;\n\nchurn rate;\n\nnet revenue retention.\n\n\n\n---\n\n13.4 Stripe\n\nA integração com Stripe deve contemplar:\n\nprodutos;\n\npreços;\n\nclientes;\n\nassinaturas;\n\ncheckout sessions;\n\ninvoices;\n\npayment intents;\n\ncharges;\n\nwebhooks;\n\nsincronização manual;\n\nsincronização automática;\n\nhistórico.\n\n\nWebhooks relevantes:\n\ncustomer.created;\n\ncustomer.updated;\n\ncheckout.session.completed;\n\ninvoice.created;\n\ninvoice.paid;\n\ninvoice.payment_failed;\n\nsubscription.created;\n\nsubscription.updated;\n\nsubscription.deleted.\n\n\n\n---\n\n14. Segurança\n\nO sistema deve possuir um módulo central de segurança enterprise.\n\n14.1 Controles de segurança\n\npolíticas de autenticação;\n\npolíticas de senha;\n\nMFA;\n\npasskeys;\n\nsessões;\n\ndispositivos confiáveis;\n\ncontrole de IP;\n\ngeolocalização;\n\nAPIs e tokens;\n\nOAuth2;\n\nOpenID Connect;\n\nJWT;\n\nsegredos e chaves;\n\ncertificados;\n\ncriptografia;\n\nauditoria de segurança;\n\nSIEM;\n\ndetecção de ameaças;\n\nincidentes;\n\nbackup;\n\nrecuperação;\n\nsegurança de IA.\n\n\n\n---\n\n14.2 RBAC + ABAC\n\nA autorização deve combinar:\n\nRBAC, baseado em perfil, função e grupo;\n\nABAC, baseado em tenant, empresa, filial, horário, localização, IP, dispositivo, plano e atributos do usuário.\n\n\n\n---\n\n14.3 MFA\n\nMétodos suportados:\n\nTOTP;\n\nSMS;\n\ne-mail;\n\nAuthenticator;\n\nPasskey;\n\nFIDO2;\n\nWebAuthn.\n\n\nMFA deve ser obrigatório para:\n\nsuperadministradores;\n\nações financeiras;\n\npublicação de documentos LGPD;\n\nalteração de segurança;\n\nalteração de permissões;\n\noperações críticas de IA;\n\nacesso a dados sensíveis.\n\n\n\n---\n\n14.4 Segurança de IA\n\nA plataforma deve proteger:\n\nprompts;\n\nagentes;\n\nmodelos;\n\nferramentas;\n\narquivos enviados;\n\ncontexto do cliente;\n\ndados sensíveis;\n\ndocumentos gerados;\n\nintegrações;\n\nsaídas da IA.\n\n\nControles:\n\ndetecção de prompt injection;\n\ndetecção de jailbreak;\n\nprevenção de vazamento;\n\nmascaramento de dados sensíveis;\n\nbloqueio de segredos;\n\nvalidação de tool calls;\n\nauditoria de execuções;\n\nrevisão de prompts críticos.\n\n\n\n---\n\n15. LGPD\n\nO módulo LGPD controla documentos legais, consentimentos, políticas, finalidades, bases legais e solicitações dos titulares.\n\nO arquivo define o módulo LGPD como responsável pela gestão centralizada de documentos legais, termos, consentimentos, políticas e registros relacionados à conformidade com a Lei Geral de Proteção de Dados, podendo disponibilizar documentos globais ou específicos por tenant. \n\n\n---\n\n15.1 Documentos LGPD\n\nTipos padrão:\n\nPolítica de Privacidade;\n\nTermos de Uso;\n\nPolítica de Cookies;\n\nPolítica de Segurança;\n\nConsentimento de Marketing;\n\nConsentimento de Tratamento de Dados;\n\nDPA;\n\nPolítica de Retenção de Dados;\n\nCódigo de Conduta;\n\nDocumento Personalizado.\n\n\n\n---\n\n15.2 LgpdDocument\n\nCampos:\n\nid;\n\ncódigo;\n\nnome;\n\ntipo;\n\ncategoria;\n\nstatus;\n\nversão;\n\ntenant;\n\nglobal;\n\ndata de publicação;\n\ndata de expiração;\n\nexigir aceite;\n\naceite obrigatório;\n\nrequer nova aceitação;\n\nHTML;\n\ntexto puro;\n\nobservações.\n\n\n\n---\n\n15.3 Aceites\n\nCada aceite deve registrar:\n\nusuário;\n\ndocumento;\n\nversão;\n\ndata;\n\nIP;\n\nnavegador;\n\ntenant.\n\n\nAceite pode ser obrigatório:\n\nno cadastro;\n\nno login;\n\nna renovação;\n\nna contratação de especialista;\n\nantes de pagamento;\n\napós nova versão;\n\nantes de criar projeto.\n\n\n\n---\n\n15.4 Solicitações do titular\n\nTipos:\n\nacesso aos dados;\n\ncorreção;\n\nexclusão;\n\nportabilidade;\n\nrevogação de consentimento.\n\n\nCada solicitação deve ter:\n\nprotocolo;\n\nstatus;\n\nresponsável;\n\nprazo;\n\nhistórico;\n\ndocumentos;\n\nauditoria.\n\n\n\n---\n\n16. Auditoria\n\nA auditoria deve ser configurável e aplicada em toda a plataforma.\n\n16.1 AuditConfiguration\n\nPermite definir:\n\ndomínio;\n\nmódulo;\n\nfuncionalidade;\n\ntela;\n\nação;\n\nevento;\n\nnível de log;\n\nretenção;\n\nobrigatoriedade;\n\nescopo.\n\n\n\n---\n\n16.2 AuditLog\n\nCada log deve registrar:\n\nid;\n\ntenant;\n\nempresa;\n\nfilial;\n\nusuário;\n\nperfil;\n\ndomínio;\n\nmódulo;\n\nfuncionalidade;\n\ntela;\n\nação;\n\nevento;\n\nendpoint;\n\nmétodo HTTP;\n\npayload de entrada;\n\npayload de saída;\n\nIP;\n\nnavegador;\n\ndata e hora;\n\nstatus;\n\nerro;\n\ncorrelação;\n\nexecução de IA, se aplicável.\n\n\nO arquivo especifica auditoria configurável por domínio, módulo, funcionalidade, tela e evento, além de logs com tenant, usuário, perfil, endpoint, payloads, IP, navegador e data/hora. \n\n\n---\n\n17. Escopo universal de dados\n\nEssa é uma regra estrutural obrigatória.\n\nTodo registro da plataforma deve possuir escopo.\n\nNenhum dado funcional pode existir sem contexto.\n\n17.1 Hierarquia de escopo\n\nGLOBAL\n └── TENANT\n      └── COMPANY\n           └── BRANCH\n                └── PROFILE\n                     └── USER\n\n\n---\n\n17.2 Tipos de escopo\n\nGLOBAL;\n\nTENANT;\n\nCOMPANY;\n\nBRANCH;\n\nPROFILE;\n\nUSER.\n\n\n\n---\n\n17.3 BaseScopedEntity\n\nToda entidade funcional deve possuir:\n\nid;\n\nscopeType;\n\ntenantId;\n\ncompanyId;\n\nbranchId;\n\nprofileId;\n\nuserId;\n\nvisibilityRule;\n\ncreatedBy;\n\ncreatedAt;\n\nupdatedBy;\n\nupdatedAt;\n\ndeletedBy;\n\ndeletedAt;\n\ndeletionReason.\n\n\n\n---\n\n17.4 Aplicação obrigatória\n\nO escopo deve ser aplicado em:\n\nentidades;\n\nAPIs;\n\nconsultas;\n\nlistagens;\n\ndetalhes;\n\ninclusões;\n\nedições;\n\nexclusões;\n\nexportações;\n\nauditorias;\n\neventos;\n\nintegrações;\n\ndocumentos;\n\nprompts;\n\ntemplates;\n\nconfigurações;\n\nexecuções de IA;\n\narquivos;\n\nespecialistas;\n\npagamentos.\n\n\n\n---\n\n18. CRUD universal e soft delete\n\nTodas as funcionalidades cadastráveis devem seguir o mesmo padrão.\n\nO arquivo define uma regra arquitetural obrigatória: toda funcionalidade deve possuir listagem, visualização, inclusão, edição, exclusão com confirmação, soft delete, auditoria, controle de escopo, controle de permissões, histórico, filtros, APIs compatíveis e suporte multi-tenant. \n\n\n---\n\n18.1 Telas obrigatórias\n\nToda funcionalidade deve ter:\n\nlistagem;\n\nvisualização;\n\ndetalhamento;\n\ninclusão;\n\nedição;\n\nexclusão lógica;\n\nhistórico;\n\nauditoria.\n\n\n\n---\n\n18.2 Rotas padrão\n\n/{modulo}/{funcionalidade}\n/{modulo}/{funcionalidade}/{id}\n/{modulo}/{funcionalidade}/novo\n/{modulo}/{funcionalidade}/{id}/editar\n\n\n---\n\n18.3 Soft delete obrigatório\n\nNenhum dado deve ser removido fisicamente.\n\nProibido:\n\nDELETE FROM tabela\n\nPermitido:\n\nUPDATE tabela\nSET\n  deleted_at = NOW(),\n  deleted_by = :usuario,\n  deletion_reason = :motivo\nWHERE id = :id\n\n\n---\n\n19. Templates e edição HTML\n\nA plataforma deve possuir templates reutilizáveis para:\n\ndocumentos;\n\ne-mails;\n\nnotificações;\n\nLGPD;\n\netapas;\n\ntimelines;\n\npropostas;\n\ncontratos;\n\ndocumentos técnicos;\n\nmensagens do sistema.\n\n\n\n---\n\n19.1 Componentes compartilhados\n\nHtmlEditor;\n\nHtmlRenderer;\n\nHtmlPreview;\n\nHtmlSanitizer;\n\nVersionComparisonViewer.\n\n\n\n---\n\n19.2 Recursos do editor\n\nmodo visual;\n\nmodo código;\n\nmodo split;\n\npreview desktop;\n\npreview tablet;\n\npreview mobile;\n\nsanitização;\n\nbloqueio de scripts;\n\nbloqueio de javascript:;\n\nbloqueio de iframes não autorizados.\n\n\n\n---\n\n20. Menus finais da plataforma\n\n20.1 Menu Superadministrador\n\nSuperadministrador\n ├── Alternador de Escopo\n ├── Dashboard Global\n ├── Tenants\n │    ├── Dashboard Tenant\n │    ├── Usuários\n │    ├── Empresas\n │    ├── Filiais\n │    ├── Projetos\n │    ├── Auditoria\n │    ├── Consumo\n │    └── Assinatura\n ├── Planos\n │    ├── Pessoal\n │    ├── Empresarial\n │    ├── Produtos Stripe\n │    ├── Preços Stripe\n │    ├── URLs de Pagamento\n │    └── Histórico\n ├── Assinaturas\n │    ├── Dashboard\n │    ├── Assinaturas\n │    ├── Pagamentos\n │    ├── Inadimplência\n │    ├── Upgrades e Downgrades\n │    ├── Cobranças\n │    ├── Relatórios\n │    ├── Stripe Sync\n │    └── Auditoria\n ├── Funcionalidades\n ├── Perfis e Permissões\n ├── IA\n │    ├── Agentes\n │    ├── Prompts\n │    ├── Modelos\n │    ├── Execuções\n │    ├── Custos\n │    └── Configurações\n ├── Templates\n │    ├── Documentos\n │    ├── E-mails\n │    ├── Notificações\n │    ├── Timelines\n │    └── Etapas\n ├── Especialistas\n │    ├── Especialistas\n │    ├── Skills\n │    ├── Convites\n │    ├── Contratações\n │    └── Repasses\n ├── LGPD\n ├── Segurança\n ├── Auditoria\n ├── Billing\n ├── Feature Flags\n ├── Validações\n └── Configurações Globais\n\n\n---\n\n20.2 Menu Cliente\n\nCliente\n ├── Dashboard\n ├── Novo Sistema\n ├── Sistemas / Projetos\n │    ├── Timeline\n │    ├── Etapas\n │    ├── Documentos\n │    ├── Arquivos\n │    ├── Links\n │    ├── Comentários\n │    ├── Especialistas\n │    └── Histórico\n ├── Especialistas\n │    ├── Buscar Especialista\n │    ├── Contratações\n │    └── Pagamentos\n ├── Documentos\n ├── Arquivos\n ├── Usuários\n ├── Empresas\n ├── Filiais\n ├── Assinatura\n ├── Consumo\n ├── Configurações\n └── LGPD / Termos\n\n\n---\n\n20.3 Menu Especialista\n\nEspecialista\n ├── Dashboard\n ├── Perfil\n ├── Skills\n ├── Convites\n ├── Trabalhos Ativos\n ├── Etapas Vinculadas\n ├── Horas\n ├── Pagamentos\n ├── Avaliações\n └── Configurações\n\n\n---\n\n21. Entidades principais finais\n\n21.1 Administração\n\nSuperAdminUser;\n\nTenant;\n\nCompany;\n\nBranch;\n\nTenantUser;\n\nGlobalSettings;\n\nTenantConfiguration;\n\nSystemConfiguration;\n\nFeatureFlag.\n\n\n21.2 IA\n\nAiAgent;\n\nAiPrompt;\n\nAiPromptVersion;\n\nAiModel;\n\nAiExecution;\n\nAiExecutionLog;\n\nAiProvider;\n\nAiTool;\n\nKnowledgeBase.\n\n\n21.3 Projetos\n\nProject;\n\nProjectFile;\n\nProjectLink;\n\nProjectAudio;\n\nProjectTimeline;\n\nProjectStep;\n\nStepExecution;\n\nGeneratedDocument;\n\nDocumentVersion;\n\nApproval;\n\nComment.\n\n\n21.4 Timeline\n\nTimelineTemplate;\n\nTimelineTemplateStep;\n\nStepTemplate;\n\nStepRequiredSkill;\n\nStepInputSchema;\n\nStepOutputSchema;\n\nStepDocumentDefinition.\n\n\n21.5 Especialistas\n\nSpecialist;\n\nSkill;\n\nSpecialistSkill;\n\nSpecialistInvitation;\n\nSpecialistContract;\n\nSpecialistContractHour;\n\nSpecialistPayment;\n\nSpecialistPayout;\n\nSpecialistReview.\n\n\n21.6 Planos e billing\n\nPlan;\n\nPlanFeature;\n\nFeature;\n\nFeatureLimit;\n\nSubscription;\n\nSubscriptionHistory;\n\nSubscriptionUsage;\n\nPayment;\n\nInvoice;\n\nStripeCustomer;\n\nStripeProduct;\n\nStripePrice;\n\nStripeSubscription;\n\nStripeInvoice;\n\nStripeWebhook;\n\nStripeCheckoutSession.\n\n\n21.7 Segurança\n\nProfile;\n\nProfilePermission;\n\nSecurityPolicy;\n\nAuthenticationPolicy;\n\nPasswordPolicy;\n\nMfaPolicy;\n\nSessionPolicy;\n\nAccessPolicy;\n\nTrustedDevice;\n\nIpRule;\n\nGeoRule;\n\nApiKey;\n\nOAuthClient;\n\nSecretVault;\n\nCertificate;\n\nEncryptionPolicy;\n\nSecurityEvent;\n\nSecurityIncident;\n\nThreatDetectionRule;\n\nAiSecurityPolicy.\n\n\n21.8 LGPD\n\nLgpdDocument;\n\nLgpdDocumentVersion;\n\nLgpdAcceptance;\n\nLgpdCategory;\n\nLgpdPurpose;\n\nLgpdLegalBasis;\n\nLgpdRequest;\n\nLgpdRequestHistory;\n\nLgpdConfiguration;\n\nLgpdAuditLog.\n\n\n21.9 Auditoria\n\nAuditConfiguration;\n\nAuditEvent;\n\nAuditLog;\n\nSecurityAuditLog;\n\nAiExecutionAuditLog;\n\nLgpdAuditLog.\n\n\n\n---\n\n22. Definição final consolidada\n\nA definição final do sistema é:\n\n> Uma plataforma SaaS B2B multi-tenant enterprise para criação de sistemas com inteligência artificial, onde o Superadministrador configura toda a governança da plataforma — tenants, empresas, filiais, planos, assinaturas, funcionalidades, limites, permissões, segurança, LGPD, auditoria, billing, prompts, agentes de IA, modelos, templates, timelines, etapas, documentos e especialistas — enquanto empresas clientes criam projetos de sistemas a partir de ideias iniciais, enviam textos, arquivos, links, áudios e imagens, percorrem uma timeline de etapas configuráveis, executam assistentes de IA compostos por prompts versionados, geram documentos estruturados e versionados, reexecutam etapas com novos contextos, aprovam entregáveis e contratam especialistas humanos por hora conforme as skills exigidas em cada etapa.\n\n\n\nEm termos arquiteturais, o sistema é uma fábrica de sistemas orientada a IA, documentos, etapas, escopo e governança, com:\n\nmulti-tenant;\n\nmultiempresa;\n\nmatriz e filial;\n\nescopo universal de dados;\n\nsoft delete obrigatório;\n\nCRUD padronizado;\n\nauditoria total;\n\nRBAC + ABAC;\n\nsegurança enterprise;\n\nLGPD nativo;\n\nbilling com Stripe;\n\nplanos granulares por funcionalidade;\n\ncontrole de consumo;\n\nprompts versionados;\n\nagentes configuráveis;\n\nexecução rastreável de IA;\n\ndocumentos versionados;\n\nmarketplace de especialistas;\n\npagamento por hora;\n\ncustódia e repasse;\n\ndashboards globais;\n\ndashboards por tenant;\n\ncontrole centralizado pelo Superadministrador.\n\n\nA plataforma não é apenas um gerador de sistemas por prompt. Ela é uma infraestrutura completa para transformar ideias em sistemas especificados, documentados, revisados, governados, auditados e preparados para desenvolvimento, combinando IA, workflow, documentação, segurança, billing e especialistas humanos em um único ecossistema SaaS enterprise.",
+  "original_idea_sha256": "6a4ace07624939d93cdf2e324ff40209a8c1dfca34904f0e04193cc2616d10c3",
+  "preservation_status": "exact",
+  "artifacts": [
+    "docs/00.json",
+    "docs/00.md",
+    "docs/core.md",
+    "docs/design.md",
+    "docs/theme/tokens.angular.json",
+    "docs/theme/web.css",
+    "docs/visual-identity/adaptive/background-432.png",
+    "docs/visual-identity/adaptive/background-512.png",
+    "docs/visual-identity/adaptive/foreground-432.png",
+    "docs/visual-identity/adaptive/foreground-512.png",
+    "docs/visual-identity/adaptive/monochrome-432.png",
+    "docs/visual-identity/adaptive/monochrome-512.png",
+    "docs/visual-identity/android/ic_launcher_hdpi.png",
+    "docs/visual-identity/android/ic_launcher_mdpi.png",
+    "docs/visual-identity/android/ic_launcher_xhdpi.png",
+    "docs/visual-identity/android/ic_launcher_xxhdpi.png",
+    "docs/visual-identity/android/ic_launcher_xxxhdpi.png",
+    "docs/visual-identity/brand-guidelines.md",
+    "docs/visual-identity/favicon-16.png",
+    "docs/visual-identity/favicon-32.png",
+    "docs/visual-identity/favicon-48.png",
+    "docs/visual-identity/favicon-64.png",
+    "docs/visual-identity/favicon.ico",
+    "docs/visual-identity/favicon.svg",
+    "docs/visual-identity/ios/AppIcon-1024.png",
+    "docs/visual-identity/ios/AppIcon-120.png",
+    "docs/visual-identity/ios/AppIcon-152.png",
+    "docs/visual-identity/ios/AppIcon-167.png",
+    "docs/visual-identity/ios/AppIcon-180.png",
+    "docs/visual-identity/ios/AppIcon-20.png",
+    "docs/visual-identity/ios/AppIcon-29.png",
+    "docs/visual-identity/ios/AppIcon-40.png",
+    "docs/visual-identity/ios/AppIcon-58.png",
+    "docs/visual-identity/ios/AppIcon-60.png",
+    "docs/visual-identity/ios/AppIcon-76.png",
+    "docs/visual-identity/ios/AppIcon-80.png",
+    "docs/visual-identity/ios/AppIcon-87.png",
+    "docs/visual-identity/logo-horizontal.svg",
+    "docs/visual-identity/logo-monochrome.svg",
+    "docs/visual-identity/logo-negative.svg",
+    "docs/visual-identity/logo-symbol.svg",
+    "docs/visual-identity/logo-vertical.svg",
+    "docs/visual-identity/logo.svg",
+    "docs/visual-identity/pwa/icon-192.png",
+    "docs/visual-identity/pwa/icon-512.png",
+    "docs/visual-identity/pwa/icon-maskable-192.png",
+    "docs/visual-identity/pwa/icon-maskable-512.png",
+    "docs/visual-identity/social/open-graph.png",
+    "docs/visual-identity/social/social-square.png",
+    "docs/visual-identity/social/x-header.png",
+    "docs/visual-identity/splash/splash-dark-1080x1920.png",
+    "docs/visual-identity/splash/splash-dark-1170x2532.png",
+    "docs/visual-identity/splash/splash-dark-1440x2560.png",
+    "docs/visual-identity/splash/splash-light-1080x1920.png",
+    "docs/visual-identity/splash/splash-light-1170x2532.png",
+    "docs/visual-identity/splash/splash-light-1440x2560.png"
+  ],
+  "validation": {
+    "total": 56,
+    "passed": 56,
+    "failed": 0,
+    "checks": [
+      {
+        "file": "docs/00.json",
+        "ok": true,
+        "detail": "JSON válido"
+      },
+      {
+        "file": "docs/00.md",
+        "ok": true,
+        "detail": "Markdown presente"
+      },
+      {
+        "file": "docs/core.md",
+        "ok": true,
+        "detail": "Markdown presente"
+      },
+      {
+        "file": "docs/design.md",
+        "ok": true,
+        "detail": "Markdown presente"
+      },
+      {
+        "file": "docs/theme/tokens.angular.json",
+        "ok": true,
+        "detail": "JSON válido"
+      },
+      {
+        "file": "docs/theme/web.css",
+        "ok": true,
+        "detail": "CSS estruturalmente balanceado"
+      },
+      {
+        "file": "docs/visual-identity/adaptive/background-432.png",
+        "ok": true,
+        "detail": "Imagem válida"
+      },
+      {
+        "file": "docs/visual-identity/adaptive/background-512.png",
+        "ok": true,
+        "detail": "Imagem válida"
+      },
+      {
+        "file": "docs/visual-identity/adaptive/foreground-432.png",
+        "ok": true,
+        "detail": "Imagem válida"
+      },
+      {
+        "file": "docs/visual-identity/adaptive/foreground-512.png",
+        "ok": true,
+        "detail": "Imagem válida"
+      },
+      {
+        "file": "docs/visual-identity/adaptive/monochrome-432.png",
+        "ok": true,
+        "detail": "Imagem válida"
+      },
+      {
+        "file": "docs/visual-identity/adaptive/monochrome-512.png",
+        "ok": true,
+        "detail": "Imagem válida"
+      },
+      {
+        "file": "docs/visual-identity/android/ic_launcher_hdpi.png",
+        "ok": true,
+        "detail": "Imagem válida"
+      },
+      {
+        "file": "docs/visual-identity/android/ic_launcher_mdpi.png",
+        "ok": true,
+        "detail": "Imagem válida"
+      },
+      {
+        "file": "docs/visual-identity/android/ic_launcher_xhdpi.png",
+        "ok": true,
+        "detail": "Imagem válida"
+      },
+      {
+        "file": "docs/visual-identity/android/ic_launcher_xxhdpi.png",
+        "ok": true,
+        "detail": "Imagem válida"
+      },
+      {
+        "file": "docs/visual-identity/android/ic_launcher_xxxhdpi.png",
+        "ok": true,
+        "detail": "Imagem válida"
+      },
+      {
+        "file": "docs/visual-identity/brand-guidelines.md",
+        "ok": true,
+        "detail": "Markdown presente"
+      },
+      {
+        "file": "docs/visual-identity/favicon-16.png",
+        "ok": true,
+        "detail": "Imagem válida"
+      },
+      {
+        "file": "docs/visual-identity/favicon-32.png",
+        "ok": true,
+        "detail": "Imagem válida"
+      },
+      {
+        "file": "docs/visual-identity/favicon-48.png",
+        "ok": true,
+        "detail": "Imagem válida"
+      },
+      {
+        "file": "docs/visual-identity/favicon-64.png",
+        "ok": true,
+        "detail": "Imagem válida"
+      },
+      {
+        "file": "docs/visual-identity/favicon.ico",
+        "ok": true,
+        "detail": "Imagem válida"
+      },
+      {
+        "file": "docs/visual-identity/favicon.svg",
+        "ok": true,
+        "detail": "SVG/XML válido com viewBox"
+      },
+      {
+        "file": "docs/visual-identity/ios/AppIcon-1024.png",
+        "ok": true,
+        "detail": "Imagem válida"
+      },
+      {
+        "file": "docs/visual-identity/ios/AppIcon-120.png",
+        "ok": true,
+        "detail": "Imagem válida"
+      },
+      {
+        "file": "docs/visual-identity/ios/AppIcon-152.png",
+        "ok": true,
+        "detail": "Imagem válida"
+      },
+      {
+        "file": "docs/visual-identity/ios/AppIcon-167.png",
+        "ok": true,
+        "detail": "Imagem válida"
+      },
+      {
+        "file": "docs/visual-identity/ios/AppIcon-180.png",
+        "ok": true,
+        "detail": "Imagem válida"
+      },
+      {
+        "file": "docs/visual-identity/ios/AppIcon-20.png",
+        "ok": true,
+        "detail": "Imagem válida"
+      },
+      {
+        "file": "docs/visual-identity/ios/AppIcon-29.png",
+        "ok": true,
+        "detail": "Imagem válida"
+      },
+      {
+        "file": "docs/visual-identity/ios/AppIcon-40.png",
+        "ok": true,
+        "detail": "Imagem válida"
+      },
+      {
+        "file": "docs/visual-identity/ios/AppIcon-58.png",
+        "ok": true,
+        "detail": "Imagem válida"
+      },
+      {
+        "file": "docs/visual-identity/ios/AppIcon-60.png",
+        "ok": true,
+        "detail": "Imagem válida"
+      },
+      {
+        "file": "docs/visual-identity/ios/AppIcon-76.png",
+        "ok": true,
+        "detail": "Imagem válida"
+      },
+      {
+        "file": "docs/visual-identity/ios/AppIcon-80.png",
+        "ok": true,
+        "detail": "Imagem válida"
+      },
+      {
+        "file": "docs/visual-identity/ios/AppIcon-87.png",
+        "ok": true,
+        "detail": "Imagem válida"
+      },
+      {
+        "file": "docs/visual-identity/logo-horizontal.svg",
+        "ok": true,
+        "detail": "SVG/XML válido com viewBox"
+      },
+      {
+        "file": "docs/visual-identity/logo-monochrome.svg",
+        "ok": true,
+        "detail": "SVG/XML válido com viewBox"
+      },
+      {
+        "file": "docs/visual-identity/logo-negative.svg",
+        "ok": true,
+        "detail": "SVG/XML válido com viewBox"
+      },
+      {
+        "file": "docs/visual-identity/logo-symbol.svg",
+        "ok": true,
+        "detail": "SVG/XML válido com viewBox"
+      },
+      {
+        "file": "docs/visual-identity/logo-vertical.svg",
+        "ok": true,
+        "detail": "SVG/XML válido com viewBox"
+      },
+      {
+        "file": "docs/visual-identity/logo.svg",
+        "ok": true,
+        "detail": "SVG/XML válido com viewBox"
+      },
+      {
+        "file": "docs/visual-identity/pwa/icon-192.png",
+        "ok": true,
+        "detail": "Imagem válida"
+      },
+      {
+        "file": "docs/visual-identity/pwa/icon-512.png",
+        "ok": true,
+        "detail": "Imagem válida"
+      },
+      {
+        "file": "docs/visual-identity/pwa/icon-maskable-192.png",
+        "ok": true,
+        "detail": "Imagem válida"
+      },
+      {
+        "file": "docs/visual-identity/pwa/icon-maskable-512.png",
+        "ok": true,
+        "detail": "Imagem válida"
+      },
+      {
+        "file": "docs/visual-identity/social/open-graph.png",
+        "ok": true,
+        "detail": "Imagem válida"
+      },
+      {
+        "file": "docs/visual-identity/social/social-square.png",
+        "ok": true,
+        "detail": "Imagem válida"
+      },
+      {
+        "file": "docs/visual-identity/social/x-header.png",
+        "ok": true,
+        "detail": "Imagem válida"
+      },
+      {
+        "file": "docs/visual-identity/splash/splash-dark-1080x1920.png",
+        "ok": true,
+        "detail": "Imagem válida"
+      },
+      {
+        "file": "docs/visual-identity/splash/splash-dark-1170x2532.png",
+        "ok": true,
+        "detail": "Imagem válida"
+      },
+      {
+        "file": "docs/visual-identity/splash/splash-dark-1440x2560.png",
+        "ok": true,
+        "detail": "Imagem válida"
+      },
+      {
+        "file": "docs/visual-identity/splash/splash-light-1080x1920.png",
+        "ok": true,
+        "detail": "Imagem válida"
+      },
+      {
+        "file": "docs/visual-identity/splash/splash-light-1170x2532.png",
+        "ok": true,
+        "detail": "Imagem válida"
+      },
+      {
+        "file": "docs/visual-identity/splash/splash-light-1440x2560.png",
+        "ok": true,
+        "detail": "Imagem válida"
+      }
+    ]
+  },
+  "status_final": "passed_with_warnings",
+  "limitations": [
+    "O arquivo 00-prompt-exec.md citado pelo objetivo 00-09 não estava no pacote; foi gerado um conjunto completo e convencional de assets web, Android, iOS, PWA, social e splash.",
+    "Validação WCAG foi realizada por seleção de combinações de alta diferença luminosa, sem ferramenta externa de auditoria visual."
+  ]
+}

@@ -1,0 +1,297 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "$description": "Tokens oficiais ForgeFlow AI",
+  "metadata": {
+    "version": {
+      "$type": "string",
+      "$value": "1.0.0"
+    },
+    "source": {
+      "$type": "string",
+      "$value": "stage-00"
+    }
+  },
+  "primitive": {
+    "color": {
+      "ink": {
+        "$type": "color",
+        "$value": "#111318",
+        "$description": "ink"
+      },
+      "navy": {
+        "$type": "color",
+        "$value": "#17233A",
+        "$description": "navy"
+      },
+      "cobalt": {
+        "$type": "color",
+        "$value": "#315CFF",
+        "$description": "cobalt"
+      },
+      "cyan": {
+        "$type": "color",
+        "$value": "#30C7D9",
+        "$description": "cyan"
+      },
+      "mint": {
+        "$type": "color",
+        "$value": "#80E6C4",
+        "$description": "mint"
+      },
+      "paper": {
+        "$type": "color",
+        "$value": "#F7F8FB",
+        "$description": "paper"
+      },
+      "white": {
+        "$type": "color",
+        "$value": "#FFFFFF",
+        "$description": "white"
+      },
+      "error": {
+        "$type": "color",
+        "$value": "#B3261E",
+        "$description": "error"
+      },
+      "warning": {
+        "$type": "color",
+        "$value": "#8A4F00",
+        "$description": "warning"
+      },
+      "success": {
+        "$type": "color",
+        "$value": "#126B45",
+        "$description": "success"
+      }
+    },
+    "space": {
+      "0": {
+        "$type": "dimension",
+        "$value": "0px"
+      },
+      "1": {
+        "$type": "dimension",
+        "$value": "4px"
+      },
+      "2": {
+        "$type": "dimension",
+        "$value": "8px"
+      },
+      "3": {
+        "$type": "dimension",
+        "$value": "12px"
+      },
+      "4": {
+        "$type": "dimension",
+        "$value": "16px"
+      },
+      "5": {
+        "$type": "dimension",
+        "$value": "20px"
+      },
+      "6": {
+        "$type": "dimension",
+        "$value": "24px"
+      },
+      "7": {
+        "$type": "dimension",
+        "$value": "28px"
+      },
+      "8": {
+        "$type": "dimension",
+        "$value": "32px"
+      },
+      "9": {
+        "$type": "dimension",
+        "$value": "36px"
+      },
+      "10": {
+        "$type": "dimension",
+        "$value": "40px"
+      },
+      "11": {
+        "$type": "dimension",
+        "$value": "44px"
+      },
+      "12": {
+        "$type": "dimension",
+        "$value": "48px"
+      }
+    },
+    "radius": {
+      "sm": {
+        "$type": "dimension",
+        "$value": "6px"
+      },
+      "md": {
+        "$type": "dimension",
+        "$value": "12px"
+      },
+      "lg": {
+        "$type": "dimension",
+        "$value": "20px"
+      },
+      "full": {
+        "$type": "dimension",
+        "$value": "999px"
+      }
+    },
+    "duration": {
+      "fast": {
+        "$type": "duration",
+        "$value": "120ms"
+      },
+      "normal": {
+        "$type": "duration",
+        "$value": "200ms"
+      },
+      "slow": {
+        "$type": "duration",
+        "$value": "320ms"
+      }
+    }
+  },
+  "semantic": {
+    "light": {
+      "color": {
+        "background": {
+          "$type": "color",
+          "$value": "{primitive.color.paper}"
+        },
+        "surface": {
+          "$type": "color",
+          "$value": "{primitive.color.white}"
+        },
+        "onSurface": {
+          "$type": "color",
+          "$value": "{primitive.color.ink}"
+        },
+        "primary": {
+          "$type": "color",
+          "$value": "{primitive.color.cobalt}"
+        },
+        "secondary": {
+          "$type": "color",
+          "$value": "{primitive.color.cyan}"
+        },
+        "success": {
+          "$type": "color",
+          "$value": "{primitive.color.success}"
+        },
+        "error": {
+          "$type": "color",
+          "$value": "{primitive.color.error}"
+        },
+        "outline": {
+          "$type": "color",
+          "$value": "#737783"
+        }
+      }
+    },
+    "dark": {
+      "color": {
+        "background": {
+          "$type": "color",
+          "$value": "#0C111B"
+        },
+        "surface": {
+          "$type": "color",
+          "$value": "{primitive.color.navy}"
+        },
+        "onSurface": {
+          "$type": "color",
+          "$value": "#F1F3F9"
+        },
+        "primary": {
+          "$type": "color",
+          "$value": "#9CB1FF"
+        },
+        "secondary": {
+          "$type": "color",
+          "$value": "#72E3F0"
+        },
+        "success": {
+          "$type": "color",
+          "$value": "#80E6C4"
+        },
+        "error": {
+          "$type": "color",
+          "$value": "#FFB4AB"
+        },
+        "outline": {
+          "$type": "color",
+          "$value": "#8D93A3"
+        }
+      }
+    },
+    "focus": {
+      "width": {
+        "$type": "dimension",
+        "$value": "3px"
+      },
+      "offset": {
+        "$type": "dimension",
+        "$value": "2px"
+      }
+    },
+    "motion": {
+      "standard": {
+        "$type": "cubicBezier",
+        "$value": [
+          0.2,
+          0,
+          0,
+          1
+        ]
+      },
+      "reduced": {
+        "$type": "duration",
+        "$value": "1ms"
+      }
+    },
+    "breakpoint": {
+      "sm": {
+        "$type": "dimension",
+        "$value": "600px"
+      },
+      "md": {
+        "$type": "dimension",
+        "$value": "840px"
+      },
+      "lg": {
+        "$type": "dimension",
+        "$value": "1200px"
+      }
+    },
+    "zIndex": {
+      "base": {
+        "$type": "number",
+        "$value": 0
+      },
+      "drawer": {
+        "$type": "number",
+        "$value": 100
+      },
+      "modal": {
+        "$type": "number",
+        "$value": 400
+      },
+      "toast": {
+        "$type": "number",
+        "$value": 500
+      }
+    }
+  },
+  "angular": {
+    "material3": {
+      "density": {
+        "$type": "number",
+        "$value": 0
+      },
+      "useSystemVariables": {
+        "$type": "boolean",
+        "$value": true
+      }
+    }
+  }
+}

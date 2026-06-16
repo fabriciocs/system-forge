@@ -1,0 +1,35 @@
+/* Generated from docs/theme/tokens.angular.json */
+:root {
+  color-scheme: light dark;
+  --ff-color-background: #F7F8FB;
+  --ff-color-surface: #FFFFFF;
+  --ff-color-on-surface: #111318;
+  --ff-color-primary: #315CFF;
+  --ff-color-secondary: #30C7D9;
+  --ff-color-success: #126B45;
+  --ff-color-error: #B3261E;
+  --ff-color-outline: #737783;
+  --ff-space-1: 4px; --ff-space-2: 8px; --ff-space-3: 12px; --ff-space-4: 16px;
+  --ff-space-6: 24px; --ff-space-8: 32px; --ff-space-12: 48px;
+  --ff-radius-sm: 6px; --ff-radius-md: 12px; --ff-radius-lg: 20px;
+  --ff-duration-fast: 120ms; --ff-duration-normal: 200ms; --ff-duration-slow: 320ms;
+  --ff-easing-standard: cubic-bezier(.2,0,0,1);
+  --ff-focus-width: 3px; --ff-focus-offset: 2px;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--ff-color-background); color: var(--ff-color-on-surface);
+}
+[data-theme="dark"] {
+  --ff-color-background: #0C111B; --ff-color-surface: #17233A; --ff-color-on-surface: #F1F3F9;
+  --ff-color-primary: #9CB1FF; --ff-color-secondary: #72E3F0; --ff-color-success: #80E6C4;
+  --ff-color-error: #FFB4AB; --ff-color-outline: #8D93A3;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme]) {
+  --ff-color-background: #0C111B; --ff-color-surface: #17233A; --ff-color-on-surface: #F1F3F9;
+  --ff-color-primary: #9CB1FF; --ff-color-secondary: #72E3F0; --ff-color-success: #80E6C4;
+  --ff-color-error: #FFB4AB; --ff-color-outline: #8D93A3;
+} }
+*,*::before,*::after{box-sizing:border-box} body{margin:0;background:var(--ff-color-background);color:var(--ff-color-on-surface)}
+a{color:var(--ff-color-primary)} :focus-visible{outline:var(--ff-focus-width) solid var(--ff-color-primary);outline-offset:var(--ff-focus-offset)}
+.surface{background:var(--ff-color-surface);border:1px solid var(--ff-color-outline);border-radius:var(--ff-radius-md)}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:1ms;animation-iteration-count:1;transition-duration:1ms;scroll-behavior:auto}}
+@media (forced-colors: active){:focus-visible{outline:3px solid CanvasText}.surface{border:1px solid CanvasText}}
