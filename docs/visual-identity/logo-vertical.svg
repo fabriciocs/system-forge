@@ -1,1 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 108" width="96" height="108" role="img" aria-label="ForgeFlow AI"><path d="M16 8 32 0l16 8v18c0 12-7 23-16 30C23 49 16 38 16 26V8Z" fill="#315CFF"/><path d="M24 17h16v6H30v6h9v6h-9v10h-6V17Z" fill="#FFFFFF"/><circle cx="43" cy="17" r="4" fill="#30C7D9"/><text x="32" y="82" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#111318">ForgeFlow</text><text x="32" y="96" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#315CFF">AI SYSTEM FACTORY</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 360" role="img" aria-labelledby="title desc">
+  <title id="title">System Forge Vertical Logo</title>
+  <desc id="desc">Vertical logo lockup for System Forge.</desc>
+  <rect width="256" height="360" rx="36" fill="#F3F4F6"/>
+  <g transform="translate(0 28)">
+    <rect x="56" y="0" width="144" height="144" rx="28" fill="none" stroke="#111827" stroke-width="12" stroke-linejoin="round"/>
+    <rect x="82" y="26" width="92" height="92" rx="22" fill="none" stroke="#2563EB" stroke-width="12" stroke-linejoin="round"/>
+    <circle cx="128" cy="72" r="16" fill="#111827"/>
+    <circle cx="128" cy="0" r="8" fill="#D97706"/>
+    <circle cx="200" cy="72" r="8" fill="#D97706"/>
+    <circle cx="128" cy="144" r="8" fill="#D97706"/>
+    <circle cx="56" cy="72" r="8" fill="#D97706"/>
+    <path d="M128 8V26M184 72H174M128 136V118M72 72H82" fill="none" stroke="#334155" stroke-width="10" stroke-linecap="round"/>
+  </g>
+  <g fill="#111827" font-family="Inter, Arial, sans-serif" text-anchor="middle">
+    <text x="128" y="252" font-size="44" font-weight="700" letter-spacing="0.12em">SYSTEM</text>
+    <text x="128" y="304" font-size="44" font-weight="500" letter-spacing="0.16em" fill="#334155">FORGE</text>
+  </g>
+</svg>
+

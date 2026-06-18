@@ -1,0 +1,81 @@
+{
+  "project": "System Forge",
+  "coverage_status": "complete",
+  "sources": [
+    { "path": "docs/00.json", "type": "bootstrap metadata", "coverage": "full" },
+    { "path": "docs/00.md", "type": "stage closure", "coverage": "full" },
+    { "path": "docs/01.md", "type": "discovery", "coverage": "full" },
+    { "path": "docs/02.md", "type": "market research", "coverage": "full" },
+    { "path": "docs/03.md", "type": "functional specification", "coverage": "full" },
+    { "path": "docs/04.md", "type": "domain model", "coverage": "full" },
+    { "path": "docs/05.md", "type": "traceability and navigation inventory", "coverage": "full" },
+    { "path": "docs/core.md", "type": "core scope", "coverage": "full" },
+    { "path": "docs/design.md", "type": "design direction", "coverage": "full" },
+    { "path": "docs/theme/tokens.angular.json", "type": "design tokens", "coverage": "full" },
+    { "path": "docs/theme/web.css", "type": "theme stylesheet", "coverage": "auxiliary" },
+    { "path": "docs/i18n/pt-br.json", "type": "ui strings", "coverage": "full" },
+    { "path": "docs/visual-identity/brand-guidelines.md", "type": "brand rules", "coverage": "full" },
+    { "path": "docs/visual-identity/asset-manifest.md", "type": "asset manifest", "coverage": "full" }
+  ],
+  "stage_coverage": [
+    {
+      "stage": "00",
+      "status": "covered",
+      "focus": ["identity", "theme", "assets", "bootstrap metadata"],
+      "visual_destination": "foundation cards, asset gallery, token tables"
+    },
+    {
+      "stage": "01",
+      "status": "covered",
+      "focus": ["problem", "persona", "hypotheses", "risks", "discovery output"],
+      "visual_destination": "discovery summary, risk cards, hypothesis panels"
+    },
+    {
+      "stage": "02",
+      "status": "covered",
+      "focus": ["market map", "competitors", "benchmarks", "opportunities"],
+      "visual_destination": "comparison tables, benchmark matrices, opportunity cards"
+    },
+    {
+      "stage": "03",
+      "status": "covered",
+      "focus": ["product scope", "functional domains", "modules", "states", "requirements"],
+      "visual_destination": "module grid, state matrix, functional hierarchy"
+    },
+    {
+      "stage": "04",
+      "status": "covered",
+      "focus": ["entities", "relationships", "life cycle", "auditability", "integration concepts"],
+      "visual_destination": "ER diagrams, entity cards, lifecycle tables"
+    },
+    {
+      "stage": "05",
+      "status": "covered",
+      "focus": ["traceability", "navigation", "tela inventory", "i18n", "wireframe conventions"],
+      "visual_destination": "traceability matrix, route map, screen inventory, navigation graph"
+    }
+  ],
+  "visual_policy": {
+    "summary": "Use summary cards for stages, structured tables for traceability and routes, and full-text drill-down for document reading.",
+    "read_modes": {
+      "summary": ["stage overviews", "health indicators", "risk highlights"],
+      "structured": ["inventories", "matrices", "routes", "dependencies"],
+      "full": ["all stage documents", "stitch documents", "brand guidelines"]
+    }
+  },
+  "gaps": {
+    "missing_files": [],
+    "open_questions": [
+      "No pre-existing dashboard implementation exists under docs/dashboard.",
+      "Preservation therefore means retaining the documented hierarchy, not adapting an existing UI."
+    ],
+    "conflicts": [
+      "Terminology varies between system, project, timeline and execution plane across source documents.",
+      "These are conceptual overlaps, not contradictions."
+    ],
+    "duplicates": [
+      "Audit/log/trail concepts repeat across 03.md, 04.md and 05.md.",
+      "Navigation and screen inventory overlap intentionally between 05.md sections 8-11."
+    ]
+  }
+}

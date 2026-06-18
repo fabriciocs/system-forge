@@ -1,296 +1,342 @@
 {
-  "$schema": "https://design-tokens.github.io/community-group/format/",
-  "$description": "Tokens oficiais ForgeFlow AI",
-  "metadata": {
-    "version": {
-      "$type": "string",
-      "$value": "1.0.0"
-    },
-    "source": {
-      "$type": "string",
-      "$value": "stage-00"
-    }
+  "$schema": "https://design-tokens.github.io/community-group/format",
+  "version": "00-05",
+  "source": {
+    "design_direction": "Editorial Control Plane",
+    "visual_identity": "Layered Node Frame",
+    "accessibility": [
+      "WCAG 2.2 AA",
+      "focus visible",
+      "prefers-reduced-motion"
+    ]
   },
-  "primitive": {
-    "color": {
-      "ink": {
-        "$type": "color",
-        "$value": "#111318",
-        "$description": "ink"
-      },
-      "navy": {
-        "$type": "color",
-        "$value": "#17233A",
-        "$description": "navy"
-      },
-      "cobalt": {
-        "$type": "color",
-        "$value": "#315CFF",
-        "$description": "cobalt"
-      },
-      "cyan": {
-        "$type": "color",
-        "$value": "#30C7D9",
-        "$description": "cyan"
-      },
-      "mint": {
-        "$type": "color",
-        "$value": "#80E6C4",
-        "$description": "mint"
-      },
-      "paper": {
-        "$type": "color",
-        "$value": "#F7F8FB",
-        "$description": "paper"
-      },
-      "white": {
-        "$type": "color",
-        "$value": "#FFFFFF",
-        "$description": "white"
-      },
-      "error": {
-        "$type": "color",
-        "$value": "#B3261E",
-        "$description": "error"
-      },
-      "warning": {
-        "$type": "color",
-        "$value": "#8A4F00",
-        "$description": "warning"
-      },
-      "success": {
-        "$type": "color",
-        "$value": "#126B45",
-        "$description": "success"
-      }
-    },
-    "space": {
-      "0": {
-        "$type": "dimension",
-        "$value": "0px"
-      },
-      "1": {
-        "$type": "dimension",
-        "$value": "4px"
-      },
-      "2": {
-        "$type": "dimension",
-        "$value": "8px"
-      },
-      "3": {
-        "$type": "dimension",
-        "$value": "12px"
-      },
-      "4": {
-        "$type": "dimension",
-        "$value": "16px"
-      },
-      "5": {
-        "$type": "dimension",
-        "$value": "20px"
-      },
-      "6": {
-        "$type": "dimension",
-        "$value": "24px"
-      },
-      "7": {
-        "$type": "dimension",
-        "$value": "28px"
-      },
-      "8": {
-        "$type": "dimension",
-        "$value": "32px"
-      },
-      "9": {
-        "$type": "dimension",
-        "$value": "36px"
-      },
-      "10": {
-        "$type": "dimension",
-        "$value": "40px"
-      },
-      "11": {
-        "$type": "dimension",
-        "$value": "44px"
-      },
-      "12": {
-        "$type": "dimension",
-        "$value": "48px"
-      }
-    },
-    "radius": {
-      "sm": {
-        "$type": "dimension",
-        "$value": "6px"
-      },
-      "md": {
-        "$type": "dimension",
-        "$value": "12px"
-      },
-      "lg": {
-        "$type": "dimension",
-        "$value": "20px"
-      },
-      "full": {
-        "$type": "dimension",
-        "$value": "999px"
-      }
-    },
-    "duration": {
-      "fast": {
-        "$type": "duration",
-        "$value": "120ms"
-      },
-      "normal": {
-        "$type": "duration",
-        "$value": "200ms"
-      },
-      "slow": {
-        "$type": "duration",
-        "$value": "320ms"
-      }
-    }
-  },
-  "semantic": {
+  "modes": {
     "light": {
       "color": {
-        "background": {
-          "$type": "color",
-          "$value": "{primitive.color.paper}"
+        "palette": {
+          "ink": { "$type": "color", "$value": "#111827", "$description": "Primary text and surface border color." },
+          "slate": { "$type": "color", "$value": "#334155", "$description": "Secondary text and neutral emphasis." },
+          "surface": { "$type": "color", "$value": "#F3F4F6", "$description": "Main application surface." },
+          "bone": { "$type": "color", "$value": "#E5E7EB", "$description": "Subtle separators and elevated surfaces." },
+          "signalBlue": { "$type": "color", "$value": "#2563EB", "$description": "Primary action and active state accent." },
+          "signalAmber": { "$type": "color", "$value": "#D97706", "$description": "Status accent and highlights." },
+          "success": { "$type": "color", "$value": "#15803D", "$description": "Success state color." },
+          "warning": { "$type": "color", "$value": "#D97706", "$description": "Warning state color." },
+          "danger": { "$type": "color", "$value": "#DC2626", "$description": "Error and destructive state color." },
+          "info": { "$type": "color", "$value": "#0284C7", "$description": "Informational state color." }
         },
-        "surface": {
-          "$type": "color",
-          "$value": "{primitive.color.white}"
-        },
-        "onSurface": {
-          "$type": "color",
-          "$value": "{primitive.color.ink}"
-        },
-        "primary": {
-          "$type": "color",
-          "$value": "{primitive.color.cobalt}"
-        },
-        "secondary": {
-          "$type": "color",
-          "$value": "{primitive.color.cyan}"
-        },
-        "success": {
-          "$type": "color",
-          "$value": "{primitive.color.success}"
-        },
-        "error": {
-          "$type": "color",
-          "$value": "{primitive.color.error}"
-        },
-        "outline": {
-          "$type": "color",
-          "$value": "#737783"
+        "semantic": {
+          "background": { "$type": "color", "$value": "{color.palette.surface}", "$description": "App background." },
+          "surface": { "$type": "color", "$value": "{color.palette.surface}", "$description": "Default surface." },
+          "surfaceRaised": { "$type": "color", "$value": "{color.palette.bone}", "$description": "Raised surface." },
+          "textPrimary": { "$type": "color", "$value": "{color.palette.ink}", "$description": "Primary text color." },
+          "textSecondary": { "$type": "color", "$value": "{color.palette.slate}", "$description": "Secondary text color." },
+          "borderSubtle": { "$type": "color", "$value": "{color.palette.bone}", "$description": "Subtle border and divider color." },
+          "brand": { "$type": "color", "$value": "{color.palette.signalBlue}", "$description": "Primary brand color." },
+          "brandOn": { "$type": "color", "$value": "#FFFFFF", "$description": "Text/icon color on brand surfaces." },
+          "accent": { "$type": "color", "$value": "{color.palette.signalAmber}", "$description": "Accent color for markers and highlights." },
+          "focusRing": { "$type": "color", "$value": "{color.palette.signalBlue}", "$description": "Visible focus indicator color." },
+          "stateSuccess": { "$type": "color", "$value": "{color.palette.success}", "$description": "Success semantic color." },
+          "stateWarning": { "$type": "color", "$value": "{color.palette.warning}", "$description": "Warning semantic color." },
+          "stateDanger": { "$type": "color", "$value": "{color.palette.danger}", "$description": "Danger semantic color." },
+          "stateInfo": { "$type": "color", "$value": "{color.palette.info}", "$description": "Info semantic color." }
         }
+      },
+      "typography": {
+        "fontFamily": {
+          "display": { "$type": "fontFamily", "$value": "Inter Tight, Inter, Arial, sans-serif", "$description": "Condensed display family." },
+          "body": { "$type": "fontFamily", "$value": "Inter, Arial, sans-serif", "$description": "Primary body family." },
+          "mono": { "$type": "fontFamily", "$value": "IBM Plex Mono, Consolas, monospace", "$description": "Code and technical data family." }
+        },
+        "fontSize": {
+          "xs": { "$type": "dimension", "$value": "12px", "$description": "Extra small text." },
+          "sm": { "$type": "dimension", "$value": "14px", "$description": "Small text." },
+          "md": { "$type": "dimension", "$value": "16px", "$description": "Base text size." },
+          "lg": { "$type": "dimension", "$value": "20px", "$description": "Large text." },
+          "xl": { "$type": "dimension", "$value": "24px", "$description": "Extra large text." },
+          "2xl": { "$type": "dimension", "$value": "32px", "$description": "Display text." }
+        },
+        "fontWeight": {
+          "regular": { "$type": "number", "$value": 400, "$description": "Regular weight." },
+          "medium": { "$type": "number", "$value": 500, "$description": "Medium weight." },
+          "semibold": { "$type": "number", "$value": 600, "$description": "Semibold weight." },
+          "bold": { "$type": "number", "$value": 700, "$description": "Bold weight." }
+        },
+        "lineHeight": {
+          "tight": { "$type": "number", "$value": 1.1, "$description": "Tight headings." },
+          "snug": { "$type": "number", "$value": 1.3, "$description": "Compact text." },
+          "base": { "$type": "number", "$value": 1.5, "$description": "Default body line height." },
+          "relaxed": { "$type": "number", "$value": 1.7, "$description": "Dense explanatory content." }
+        },
+        "letterSpacing": {
+          "tight": { "$type": "dimension", "$value": "-0.02em", "$description": "Tight display tracking." },
+          "normal": { "$type": "dimension", "$value": "0em", "$description": "Normal tracking." },
+          "wide": { "$type": "dimension", "$value": "0.06em", "$description": "Uppercase or label tracking." }
+        }
+      },
+      "space": {
+        "0": { "$type": "dimension", "$value": "0px", "$description": "No spacing." },
+        "1": { "$type": "dimension", "$value": "4px", "$description": "Smallest spacing unit." },
+        "2": { "$type": "dimension", "$value": "8px", "$description": "Small spacing unit." },
+        "3": { "$type": "dimension", "$value": "12px", "$description": "Compact spacing unit." },
+        "4": { "$type": "dimension", "$value": "16px", "$description": "Base spacing unit." },
+        "6": { "$type": "dimension", "$value": "24px", "$description": "Medium spacing unit." },
+        "8": { "$type": "dimension", "$value": "32px", "$description": "Large spacing unit." },
+        "12": { "$type": "dimension", "$value": "48px", "$description": "Extra large spacing unit." },
+        "16": { "$type": "dimension", "$value": "64px", "$description": "Section spacing." }
+      },
+      "size": {
+        "icon": {
+          "sm": { "$type": "dimension", "$value": "16px", "$description": "Small icon size." },
+          "md": { "$type": "dimension", "$value": "20px", "$description": "Default icon size." },
+          "lg": { "$type": "dimension", "$value": "24px", "$description": "Large icon size." }
+        },
+        "control": {
+          "sm": { "$type": "dimension", "$value": "32px", "$description": "Small control height." },
+          "md": { "$type": "dimension", "$value": "40px", "$description": "Default control height." },
+          "lg": { "$type": "dimension", "$value": "48px", "$description": "Large control height." }
+        }
+      },
+      "radius": {
+        "xs": { "$type": "dimension", "$value": "6px", "$description": "Small radius." },
+        "sm": { "$type": "dimension", "$value": "8px", "$description": "Default radius." },
+        "md": { "$type": "dimension", "$value": "12px", "$description": "Card radius." },
+        "lg": { "$type": "dimension", "$value": "16px", "$description": "Large container radius." }
+      },
+      "border": {
+        "width": {
+          "hairline": { "$type": "dimension", "$value": "1px", "$description": "Hairline border." },
+          "bold": { "$type": "dimension", "$value": "2px", "$description": "Emphasis border." }
+        }
+      },
+      "elevation": {
+        "0": { "$type": "shadow", "$value": "none", "$description": "No elevation." },
+        "1": { "$type": "shadow", "$value": "0 1px 2px rgba(17,24,39,0.08)", "$description": "Subtle elevation." },
+        "2": { "$type": "shadow", "$value": "0 8px 24px rgba(17,24,39,0.10)", "$description": "Raised surface." }
+      },
+      "opacity": {
+        "disabled": { "$type": "number", "$value": 0.38, "$description": "Disabled state opacity." },
+        "muted": { "$type": "number", "$value": 0.64, "$description": "Muted content opacity." },
+        "scrim": { "$type": "number", "$value": 0.56, "$description": "Overlay scrim opacity." }
+      },
+      "motion": {
+        "duration": {
+          "fast": { "$type": "duration", "$value": "120ms", "$description": "Fast feedback." },
+          "base": { "$type": "duration", "$value": "180ms", "$description": "Default transition." },
+          "slow": { "$type": "duration", "$value": "240ms", "$description": "Slower contextual transition." },
+          "reduced": { "$type": "duration", "$value": "1ms", "$description": "Reduced-motion fallback." }
+        },
+        "easing": {
+          "standard": { "$type": "cubicBezier", "$value": [0.2, 0, 0, 1], "$description": "Standard ease." },
+          "emphasized": { "$type": "cubicBezier", "$value": [0.2, 0, 0, 1], "$description": "Emphasized ease." }
+        }
+      },
+      "breakpoint": {
+        "sm": { "$type": "dimension", "$value": "600px", "$description": "Small screens." },
+        "md": { "$type": "dimension", "$value": "900px", "$description": "Medium screens." },
+        "lg": { "$type": "dimension", "$value": "1200px", "$description": "Large screens." },
+        "xl": { "$type": "dimension", "$value": "1536px", "$description": "Extra large screens." }
+      },
+      "zIndex": {
+        "base": { "$type": "number", "$value": 0, "$description": "Base layer." },
+        "sticky": { "$type": "number", "$value": 10, "$description": "Sticky elements." },
+        "overlay": { "$type": "number", "$value": 1000, "$description": "Overlay layer." },
+        "modal": { "$type": "number", "$value": 1100, "$description": "Modal layer." },
+        "toast": { "$type": "number", "$value": 1200, "$description": "Toast layer." }
+      },
+      "state": {
+        "hover": { "$type": "color", "$value": "{color.semantic.brand}", "$description": "Hover highlight reference." },
+        "active": { "$type": "color", "$value": "{color.semantic.brand}", "$description": "Active state reference." },
+        "selected": { "$type": "color", "$value": "{color.semantic.brand}", "$description": "Selected state reference." },
+        "disabled": { "$type": "number", "$value": "{opacity.disabled}", "$description": "Disabled opacity reference." }
+      },
+      "focus": {
+        "ring": { "$type": "dimension", "$value": "2px", "$description": "Focus ring thickness." },
+        "offset": { "$type": "dimension", "$value": "2px", "$description": "Focus ring offset." }
       }
     },
     "dark": {
       "color": {
-        "background": {
-          "$type": "color",
-          "$value": "#0C111B"
+        "palette": {
+          "ink": { "$type": "color", "$value": "#F8FAFC", "$description": "Primary text and surface border color." },
+          "slate": { "$type": "color", "$value": "#CBD5E1", "$description": "Secondary text and neutral emphasis." },
+          "surface": { "$type": "color", "$value": "#0B1220", "$description": "Main application surface." },
+          "bone": { "$type": "color", "$value": "#1E293B", "$description": "Subtle separators and elevated surfaces." },
+          "signalBlue": { "$type": "color", "$value": "#60A5FA", "$description": "Primary action and active state accent." },
+          "signalAmber": { "$type": "color", "$value": "#F59E0B", "$description": "Status accent and highlights." },
+          "success": { "$type": "color", "$value": "#22C55E", "$description": "Success state color." },
+          "warning": { "$type": "color", "$value": "#F59E0B", "$description": "Warning state color." },
+          "danger": { "$type": "color", "$value": "#F87171", "$description": "Error and destructive state color." },
+          "info": { "$type": "color", "$value": "#38BDF8", "$description": "Informational state color." }
         },
-        "surface": {
-          "$type": "color",
-          "$value": "{primitive.color.navy}"
-        },
-        "onSurface": {
-          "$type": "color",
-          "$value": "#F1F3F9"
-        },
-        "primary": {
-          "$type": "color",
-          "$value": "#9CB1FF"
-        },
-        "secondary": {
-          "$type": "color",
-          "$value": "#72E3F0"
-        },
-        "success": {
-          "$type": "color",
-          "$value": "#80E6C4"
-        },
-        "error": {
-          "$type": "color",
-          "$value": "#FFB4AB"
-        },
-        "outline": {
-          "$type": "color",
-          "$value": "#8D93A3"
+        "semantic": {
+          "background": { "$type": "color", "$value": "{color.palette.surface}", "$description": "App background." },
+          "surface": { "$type": "color", "$value": "{color.palette.surface}", "$description": "Default surface." },
+          "surfaceRaised": { "$type": "color", "$value": "{color.palette.bone}", "$description": "Raised surface." },
+          "textPrimary": { "$type": "color", "$value": "{color.palette.ink}", "$description": "Primary text color." },
+          "textSecondary": { "$type": "color", "$value": "{color.palette.slate}", "$description": "Secondary text color." },
+          "borderSubtle": { "$type": "color", "$value": "{color.palette.bone}", "$description": "Subtle border and divider color." },
+          "brand": { "$type": "color", "$value": "{color.palette.signalBlue}", "$description": "Primary brand color." },
+          "brandOn": { "$type": "color", "$value": "#0B1220", "$description": "Text/icon color on brand surfaces." },
+          "accent": { "$type": "color", "$value": "{color.palette.signalAmber}", "$description": "Accent color for markers and highlights." },
+          "focusRing": { "$type": "color", "$value": "{color.palette.signalBlue}", "$description": "Visible focus indicator color." },
+          "stateSuccess": { "$type": "color", "$value": "{color.palette.success}", "$description": "Success semantic color." },
+          "stateWarning": { "$type": "color", "$value": "{color.palette.warning}", "$description": "Warning semantic color." },
+          "stateDanger": { "$type": "color", "$value": "{color.palette.danger}", "$description": "Danger semantic color." },
+          "stateInfo": { "$type": "color", "$value": "{color.palette.info}", "$description": "Info semantic color." }
         }
-      }
-    },
-    "focus": {
-      "width": {
-        "$type": "dimension",
-        "$value": "3px"
       },
-      "offset": {
-        "$type": "dimension",
-        "$value": "2px"
-      }
-    },
-    "motion": {
-      "standard": {
-        "$type": "cubicBezier",
-        "$value": [
-          0.2,
-          0,
-          0,
-          1
-        ]
+      "typography": {
+        "fontFamily": {
+          "display": { "$type": "fontFamily", "$value": "Inter Tight, Inter, Arial, sans-serif", "$description": "Condensed display family." },
+          "body": { "$type": "fontFamily", "$value": "Inter, Arial, sans-serif", "$description": "Primary body family." },
+          "mono": { "$type": "fontFamily", "$value": "IBM Plex Mono, Consolas, monospace", "$description": "Code and technical data family." }
+        },
+        "fontSize": {
+          "xs": { "$type": "dimension", "$value": "12px", "$description": "Extra small text." },
+          "sm": { "$type": "dimension", "$value": "14px", "$description": "Small text." },
+          "md": { "$type": "dimension", "$value": "16px", "$description": "Base text size." },
+          "lg": { "$type": "dimension", "$value": "20px", "$description": "Large text." },
+          "xl": { "$type": "dimension", "$value": "24px", "$description": "Extra large text." },
+          "2xl": { "$type": "dimension", "$value": "32px", "$description": "Display text." }
+        },
+        "fontWeight": {
+          "regular": { "$type": "number", "$value": 400, "$description": "Regular weight." },
+          "medium": { "$type": "number", "$value": 500, "$description": "Medium weight." },
+          "semibold": { "$type": "number", "$value": 600, "$description": "Semibold weight." },
+          "bold": { "$type": "number", "$value": 700, "$description": "Bold weight." }
+        },
+        "lineHeight": {
+          "tight": { "$type": "number", "$value": 1.1, "$description": "Tight headings." },
+          "snug": { "$type": "number", "$value": 1.3, "$description": "Compact text." },
+          "base": { "$type": "number", "$value": 1.5, "$description": "Default body line height." },
+          "relaxed": { "$type": "number", "$value": 1.7, "$description": "Dense explanatory content." }
+        },
+        "letterSpacing": {
+          "tight": { "$type": "dimension", "$value": "-0.02em", "$description": "Tight display tracking." },
+          "normal": { "$type": "dimension", "$value": "0em", "$description": "Normal tracking." },
+          "wide": { "$type": "dimension", "$value": "0.06em", "$description": "Uppercase or label tracking." }
+        }
       },
-      "reduced": {
-        "$type": "duration",
-        "$value": "1ms"
-      }
-    },
-    "breakpoint": {
-      "sm": {
-        "$type": "dimension",
-        "$value": "600px"
+      "space": {
+        "0": { "$type": "dimension", "$value": "0px", "$description": "No spacing." },
+        "1": { "$type": "dimension", "$value": "4px", "$description": "Smallest spacing unit." },
+        "2": { "$type": "dimension", "$value": "8px", "$description": "Small spacing unit." },
+        "3": { "$type": "dimension", "$value": "12px", "$description": "Compact spacing unit." },
+        "4": { "$type": "dimension", "$value": "16px", "$description": "Base spacing unit." },
+        "6": { "$type": "dimension", "$value": "24px", "$description": "Medium spacing unit." },
+        "8": { "$type": "dimension", "$value": "32px", "$description": "Large spacing unit." },
+        "12": { "$type": "dimension", "$value": "48px", "$description": "Extra large spacing unit." },
+        "16": { "$type": "dimension", "$value": "64px", "$description": "Section spacing." }
       },
-      "md": {
-        "$type": "dimension",
-        "$value": "840px"
+      "size": {
+        "icon": {
+          "sm": { "$type": "dimension", "$value": "16px", "$description": "Small icon size." },
+          "md": { "$type": "dimension", "$value": "20px", "$description": "Default icon size." },
+          "lg": { "$type": "dimension", "$value": "24px", "$description": "Large icon size." }
+        },
+        "control": {
+          "sm": { "$type": "dimension", "$value": "32px", "$description": "Small control height." },
+          "md": { "$type": "dimension", "$value": "40px", "$description": "Default control height." },
+          "lg": { "$type": "dimension", "$value": "48px", "$description": "Large control height." }
+        }
       },
-      "lg": {
-        "$type": "dimension",
-        "$value": "1200px"
-      }
-    },
-    "zIndex": {
-      "base": {
-        "$type": "number",
-        "$value": 0
+      "radius": {
+        "xs": { "$type": "dimension", "$value": "6px", "$description": "Small radius." },
+        "sm": { "$type": "dimension", "$value": "8px", "$description": "Default radius." },
+        "md": { "$type": "dimension", "$value": "12px", "$description": "Card radius." },
+        "lg": { "$type": "dimension", "$value": "16px", "$description": "Large container radius." }
       },
-      "drawer": {
-        "$type": "number",
-        "$value": 100
+      "border": {
+        "width": {
+          "hairline": { "$type": "dimension", "$value": "1px", "$description": "Hairline border." },
+          "bold": { "$type": "dimension", "$value": "2px", "$description": "Emphasis border." }
+        }
       },
-      "modal": {
-        "$type": "number",
-        "$value": 400
+      "elevation": {
+        "0": { "$type": "shadow", "$value": "none", "$description": "No elevation." },
+        "1": { "$type": "shadow", "$value": "0 1px 2px rgba(0,0,0,0.28)", "$description": "Subtle elevation." },
+        "2": { "$type": "shadow", "$value": "0 8px 24px rgba(0,0,0,0.34)", "$description": "Raised surface." }
       },
-      "toast": {
-        "$type": "number",
-        "$value": 500
+      "opacity": {
+        "disabled": { "$type": "number", "$value": 0.38, "$description": "Disabled state opacity." },
+        "muted": { "$type": "number", "$value": 0.64, "$description": "Muted content opacity." },
+        "scrim": { "$type": "number", "$value": 0.64, "$description": "Overlay scrim opacity." }
+      },
+      "motion": {
+        "duration": {
+          "fast": { "$type": "duration", "$value": "120ms", "$description": "Fast feedback." },
+          "base": { "$type": "duration", "$value": "180ms", "$description": "Default transition." },
+          "slow": { "$type": "duration", "$value": "240ms", "$description": "Slower contextual transition." },
+          "reduced": { "$type": "duration", "$value": "1ms", "$description": "Reduced-motion fallback." }
+        },
+        "easing": {
+          "standard": { "$type": "cubicBezier", "$value": [0.2, 0, 0, 1], "$description": "Standard ease." },
+          "emphasized": { "$type": "cubicBezier", "$value": [0.2, 0, 0, 1], "$description": "Emphasized ease." }
+        }
+      },
+      "breakpoint": {
+        "sm": { "$type": "dimension", "$value": "600px", "$description": "Small screens." },
+        "md": { "$type": "dimension", "$value": "900px", "$description": "Medium screens." },
+        "lg": { "$type": "dimension", "$value": "1200px", "$description": "Large screens." },
+        "xl": { "$type": "dimension", "$value": "1536px", "$description": "Extra large screens." }
+      },
+      "zIndex": {
+        "base": { "$type": "number", "$value": 0, "$description": "Base layer." },
+        "sticky": { "$type": "number", "$value": 10, "$description": "Sticky elements." },
+        "overlay": { "$type": "number", "$value": 1000, "$description": "Overlay layer." },
+        "modal": { "$type": "number", "$value": 1100, "$description": "Modal layer." },
+        "toast": { "$type": "number", "$value": 1200, "$description": "Toast layer." }
+      },
+      "state": {
+        "hover": { "$type": "color", "$value": "{color.semantic.brand}", "$description": "Hover highlight reference." },
+        "active": { "$type": "color", "$value": "{color.semantic.brand}", "$description": "Active state reference." },
+        "selected": { "$type": "color", "$value": "{color.semantic.brand}", "$description": "Selected state reference." },
+        "disabled": { "$type": "number", "$value": "{opacity.disabled}", "$description": "Disabled opacity reference." }
+      },
+      "focus": {
+        "ring": { "$type": "dimension", "$value": "2px", "$description": "Focus ring thickness." },
+        "offset": { "$type": "dimension", "$value": "2px", "$description": "Focus ring offset." }
       }
     }
   },
+  "material3": {
+    "roles": {
+      "primary": "{color.semantic.brand}",
+      "onPrimary": "{color.semantic.brandOn}",
+      "primaryContainer": "{color.semantic.surfaceRaised}",
+      "onPrimaryContainer": "{color.semantic.textPrimary}",
+      "secondary": "{color.semantic.textSecondary}",
+      "surface": "{color.semantic.surface}",
+      "surfaceContainer": "{color.semantic.surfaceRaised}",
+      "onSurface": "{color.semantic.textPrimary}",
+      "outline": "{color.semantic.borderSubtle}",
+      "error": "{color.semantic.stateDanger}",
+      "tertiary": "{color.semantic.accent}",
+      "focus": "{color.semantic.focusRing}"
+    }
+  },
   "angular": {
-    "material3": {
-      "density": {
-        "$type": "number",
-        "$value": 0
+    "theme": {
+      "primaryPalette": "{color.semantic.brand}",
+      "secondaryPalette": "{color.semantic.accent}",
+      "tertiaryPalette": "{color.semantic.stateInfo}",
+      "neutralPalette": "{color.semantic.surface}",
+      "errorPalette": "{color.semantic.stateDanger}"
+    },
+    "density": {
+      "default": 0,
+      "comfortable": -1,
+      "compact": -2
+    },
+    "tokens": {
+      "mdcTheme": {
+        "light": "material3.light",
+        "dark": "material3.dark"
       },
-      "useSystemVariables": {
-        "$type": "boolean",
-        "$value": true
+      "focusVisible": {
+        "outlineWidth": "{focus.ring}",
+        "outlineOffset": "{focus.offset}"
       }
     }
   }

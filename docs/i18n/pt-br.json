@@ -1,0 +1,184 @@
+{
+  "app": {
+    "name": "System Forge",
+    "tagline": "Governança editorial para sistemas e operações"
+  },
+  "global": {
+    "loading": "Carregando...",
+    "saving": "Salvando...",
+    "retry": "Tentar novamente",
+    "close": "Fechar",
+    "cancel": "Cancelar",
+    "confirm": "Confirmar",
+    "save": "Salvar",
+    "edit": "Editar",
+    "delete": "Excluir",
+    "search": "Buscar",
+    "filter": "Filtrar",
+    "clearFilters": "Limpar filtros",
+    "emptyStateTitle": "Nenhum resultado encontrado",
+    "emptyStateBody": "Tente ajustar os filtros ou criar um novo item.",
+    "errorTitle": "Algo deu errado",
+    "offlineTitle": "Você está offline",
+    "sessionExpired": "Sua sessão expirou. Entre novamente para continuar.",
+    "noPermission": "Você não tem permissão para executar esta ação.",
+    "planLimit": "Este recurso não está disponível no seu plano.",
+    "conflict": "Há uma versão mais recente deste conteúdo.",
+    "success": "Operação concluída com sucesso."
+  },
+  "auth": {
+    "login": {
+      "title": "Entrar",
+      "subtitle": "Acesse seu ambiente para continuar.",
+      "email": "E-mail",
+      "password": "Senha",
+      "submit": "Entrar",
+      "forgotPassword": "Esqueci minha senha",
+      "errorInvalidCredentials": "E-mail ou senha inválidos.",
+      "errorEmailRequired": "Informe seu e-mail.",
+      "errorPasswordRequired": "Informe sua senha."
+    },
+    "signup": {
+      "title": "Criar conta",
+      "subtitle": "Crie seu acesso e inicie sua organização.",
+      "name": "Nome completo",
+      "email": "E-mail corporativo",
+      "password": "Senha",
+      "confirmPassword": "Confirmar senha",
+      "acceptTerms": "Li e aceito os termos de uso.",
+      "submit": "Criar conta",
+      "errorNameRequired": "Informe seu nome.",
+      "errorEmailRequired": "Informe um e-mail válido.",
+      "errorPasswordRequired": "Crie uma senha.",
+      "errorPasswordMismatch": "As senhas não coincidem."
+    },
+    "recovery": {
+      "title": "Recuperar senha",
+      "subtitle": "Enviaremos um link para redefinir o acesso.",
+      "email": "E-mail",
+      "submit": "Enviar link",
+      "newPassword": "Nova senha",
+      "confirmPassword": "Confirmar nova senha",
+      "errorTokenInvalid": "O link de recuperação expirou ou é inválido."
+    },
+    "verifyEmail": {
+      "title": "Confirmar e-mail",
+      "subtitle": "Verifique sua caixa de entrada para continuar.",
+      "resend": "Reenviar e-mail",
+      "continue": "Continuar"
+    }
+  },
+  "context": {
+    "select": {
+      "title": "Selecionar contexto",
+      "subtitle": "Escolha o tenant, empresa e unidade ativos.",
+      "searchPlaceholder": "Buscar contexto",
+      "empty": "Nenhum contexto disponível.",
+      "submit": "Usar este contexto",
+      "recent": "Recentes"
+    }
+  },
+  "navigation": {
+    "dashboard": "Dashboard",
+    "systems": "Sistemas",
+    "reviews": "Revisões",
+    "audit": "Auditoria",
+    "reports": "Relatórios",
+    "integrations": "Integrações",
+    "billing": "Billing",
+    "settings": "Configurações",
+    "aiAssistant": "Assistente de IA",
+    "governance": "Governança"
+  },
+  "dashboard": {
+    "title": "Visão geral",
+    "systems": "Sistemas",
+    "alerts": "Alertas",
+    "activity": "Atividade recente",
+    "empty": "Ainda não há dados para exibir."
+  },
+  "system": {
+    "list": {
+      "title": "Lista de sistemas",
+      "searchPlaceholder": "Buscar sistemas",
+      "create": "Novo sistema",
+      "empty": "Nenhum sistema encontrado."
+    },
+    "detail": {
+      "title": "Detalhe do sistema",
+      "name": "Nome do sistema",
+      "description": "Descrição",
+      "status": "Status",
+      "save": "Salvar sistema",
+      "duplicate": "Duplicar",
+      "archive": "Arquivar",
+      "errorDuplicateName": "Já existe um sistema com esse nome."
+    },
+    "version": {
+      "title": "Versões",
+      "compare": "Comparar versões",
+      "restore": "Restaurar versão",
+      "approve": "Aprovar versão"
+    }
+  },
+  "review": {
+    "queue": {
+      "title": "Fila de revisão",
+      "empty": "Não há itens pendentes.",
+      "open": "Abrir revisão"
+    },
+    "detail": {
+      "title": "Revisar sistema",
+      "approve": "Aprovar",
+      "requestChanges": "Pedir ajuste",
+      "reject": "Rejeitar",
+      "comment": "Comentário"
+    }
+  },
+  "audit": {
+    "title": "Auditoria",
+    "event": "Evento",
+    "actor": "Ator",
+    "date": "Data",
+    "export": "Exportar",
+    "empty": "Nenhum evento encontrado."
+  },
+  "billing": {
+    "title": "Billing",
+    "plan": "Plano",
+    "subscription": "Assinatura",
+    "invoice": "Fatura",
+    "upgrade": "Fazer upgrade",
+    "limitReached": "Você atingiu o limite do seu plano.",
+    "paymentFailed": "Não foi possível processar o pagamento."
+  },
+  "settings": {
+    "title": "Configurações",
+    "language": "Idioma",
+    "timezone": "Fuso horário",
+    "save": "Salvar configurações"
+  },
+  "integration": {
+    "title": "Integrações",
+    "connect": "Conectar",
+    "disconnect": "Desconectar",
+    "testConnection": "Testar conexão",
+    "errorInvalidUrl": "Informe uma URL válida.",
+    "empty": "Nenhuma integração configurada."
+  },
+  "ai": {
+    "title": "Assistente de IA",
+    "prompt": "Prompt",
+    "generate": "Gerar",
+    "refine": "Refinar",
+    "reviewHuman": "Revise a saída antes de aprovar.",
+    "empty": "Nenhuma execução ainda."
+  },
+  "governance": {
+    "title": "Governança",
+    "risk": "Risco",
+    "alert": "Alerta",
+    "investigate": "Investigar",
+    "empty": "Nenhum risco registrado."
+  }
+}

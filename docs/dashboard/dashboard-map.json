@@ -1,0 +1,187 @@
+{
+  "project": {
+    "name": "System Forge",
+    "source_prompt": "C:\\repos\\prompts-exec\\subetapas\\06-01-prompt.md",
+    "goal": "Inventariar toda a documentação e planejar sua representação visual sem perda de rastreabilidade."
+  },
+  "coverage": {
+    "documentary_sources": [
+      "docs/00.json",
+      "docs/00.md",
+      "docs/01.md",
+      "docs/02.md",
+      "docs/03.md",
+      "docs/04.md",
+      "docs/05.md",
+      "docs/core.md",
+      "docs/design.md",
+      "docs/theme/tokens.angular.json",
+      "docs/theme/web.css",
+      "docs/i18n/pt-br.json",
+      "docs/visual-identity/brand-guidelines.md",
+      "docs/visual-identity/asset-manifest.md",
+      "docs/visual-identity/*",
+      "docs/wireframes/mobile/*",
+      "docs/wireframes/tablet/*",
+      "docs/wireframes/desktop/*",
+      "docs/stitch/*"
+    ],
+    "stage_map": [
+      {
+        "stage": "00",
+        "documents": ["docs/00.json", "docs/00.md", "docs/theme/tokens.angular.json", "docs/theme/web.css", "docs/visual-identity/*"],
+        "visual": "foundation"
+      },
+      {
+        "stage": "01",
+        "documents": ["docs/01.md", "docs/core.md"],
+        "visual": "discovery"
+      },
+      {
+        "stage": "02",
+        "documents": ["docs/02.md"],
+        "visual": "research"
+      },
+      {
+        "stage": "03",
+        "documents": ["docs/03.md"],
+        "visual": "functional_map"
+      },
+      {
+        "stage": "04",
+        "documents": ["docs/04.md"],
+        "visual": "domain_model"
+      },
+      {
+        "stage": "05",
+        "documents": ["docs/05.md", "docs/stitch/NAVIGATION-INVENTORY.md"],
+        "visual": "traceability_and_navigation"
+      }
+    ]
+  },
+  "navigation": {
+    "routes": [
+      { "route": "/", "label": "Landing page", "source": "docs/05.md:T01", "representation": "full-page public entry card" },
+      { "route": "/pricing", "label": "Planos", "source": "docs/05.md:T02", "representation": "comparison table" },
+      { "route": "/signup", "label": "Criar conta", "source": "docs/05.md:T03", "representation": "form panel" },
+      { "route": "/login", "label": "Login", "source": "docs/05.md:T04", "representation": "form panel" },
+      { "route": "/forgot-password", "label": "Recuperação de senha", "source": "docs/05.md:T05", "representation": "form panel" },
+      { "route": "/verify-email", "label": "Confirmação de email", "source": "docs/05.md:T06", "representation": "status card" },
+      { "route": "/context/select", "label": "Seleção de contexto", "source": "docs/05.md:T07", "representation": "hierarchical selector" },
+      { "route": "/onboarding", "label": "Onboarding", "source": "docs/05.md:T08", "representation": "stepper" },
+      { "route": "/app/dashboard", "label": "Dashboard do tenant", "source": "docs/05.md:T09", "representation": "dashboard grid" },
+      { "route": "/app/system", "label": "Lista de sistemas", "source": "docs/05.md:T10", "representation": "dense table/list" },
+      { "route": "/app/system/:id", "label": "Detalhe de sistema", "source": "docs/05.md:T11", "representation": "detail shell with tabs" },
+      { "route": "/app/system/:id/version/:versionId", "label": "Versão do sistema", "source": "docs/05.md:T12", "representation": "diff view" },
+      { "route": "/app/review", "label": "Fila de revisão", "source": "docs/05.md:T13", "representation": "work queue" },
+      { "route": "/app/review/:id", "label": "Revisão do sistema", "source": "docs/05.md:T14", "representation": "comparison panel" },
+      { "route": "/app/audit", "label": "Auditoria", "source": "docs/05.md:T15", "representation": "audit table" },
+      { "route": "/app/reports", "label": "Relatórios", "source": "docs/05.md:T16", "representation": "analytics panel" },
+      { "route": "/app/integrations", "label": "Integrações", "source": "docs/05.md:T17", "representation": "integration cards" },
+      { "route": "/app/integrations/:id", "label": "Detalhe de integração", "source": "docs/05.md:T18", "representation": "status detail panel" },
+      { "route": "/app/billing", "label": "Billing", "source": "docs/05.md:T19", "representation": "plan and usage cards" },
+      { "route": "/app/billing/usage", "label": "Uso e limites", "source": "docs/05.md:T20", "representation": "quota dashboard" },
+      { "route": "/app/settings", "label": "Configurações", "source": "docs/05.md:T21", "representation": "settings form" },
+      { "route": "/app/ai", "label": "Assistente de IA", "source": "docs/05.md:T22", "representation": "assistant workspace" },
+      { "route": "/app/governance", "label": "Painel de governança", "source": "docs/05.md:T23", "representation": "risk/control panel" }
+    ]
+  },
+  "representation": {
+    "summary_views": [
+      "00.md executive summary and acceptance matrix",
+      "01.md sections 15-20",
+      "02.md sections 12-18",
+      "03.md sections 1-9, 26-30",
+      "05.md sections 1-10, 12-13, 20-30",
+      "design.md key decision sections"
+    ],
+    "structured_views": [
+      "00.json tokens and metadata",
+      "03.md matrices for domains, modules, functions, automations, reports and states",
+      "04.md entity tables and Mermaid ER diagrams",
+      "05.md traceability matrix, screen inventory, navigation architecture and i18n conventions",
+      "docs/i18n/pt-br.json",
+      "docs/theme/tokens.angular.json"
+    ],
+    "full_text_required": [
+      "docs/00.md",
+      "docs/01.md",
+      "docs/02.md",
+      "docs/03.md",
+      "docs/04.md",
+      "docs/05.md",
+      "docs/core.md",
+      "docs/design.md",
+      "docs/stitch/*.md",
+      "docs/visual-identity/brand-guidelines.md"
+    ]
+  },
+  "visual_widgets": {
+    "cards": [
+      "stage summaries",
+      "document counts",
+      "coverage health",
+      "risk and gap highlights"
+    ],
+    "tables": [
+      "document inventory",
+      "stage-by-stage coverage",
+      "route map",
+      "traceability matrix",
+      "gap register"
+    ],
+    "timelines": [
+      "stage progression from 00 to 05",
+      "product journey across public and authenticated flows"
+    ],
+    "matrices": [
+      "source to artifact",
+      "requirement to domain to module to entity",
+      "state to behavior",
+      "route to screen to profile"
+    ],
+    "accordions": [
+      "long documents by section",
+      "stitch prompts and checklists",
+      "duplicate or conflicting coverage notes"
+    ],
+    "tabs": [
+      "by stage",
+      "by source",
+      "by route",
+      "by theme",
+      "by status"
+    ],
+    "chips": [
+      "stage id",
+      "coverage status",
+      "summary / structured / full",
+      "hypothesis / fact / decision"
+    ],
+    "diagrams": [
+      "documentation tree",
+      "navigation graph",
+      "entity relationships",
+      "coverage heatmap"
+    ]
+  },
+  "status": {
+    "covered": true,
+    "gaps": [
+      {
+        "item": "docs/dashboard directory was absent before generation.",
+        "impact": "No existing dashboard structure to preserve.",
+        "severity": "low"
+      },
+      {
+        "item": "docs/theme/web.css was not part of the mandatory input but is relevant to visual consistency.",
+        "impact": "Include as auxiliary source in dashboard views.",
+        "severity": "low"
+      }
+    ],
+    "duplicates": [
+      "system / project / project execution plane terminology overlaps across 01.md, 03.md and 04.md.",
+      "auditoria, logs and trilha de auditoria are distinct concepts but are frequently co-mentioned."
+    ]
+  }
+}

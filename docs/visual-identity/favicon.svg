@@ -1,1 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="ForgeFlow AI"><path d="M16 8 32 0l16 8v18c0 12-7 23-16 30C23 49 16 38 16 26V8Z" fill="#315CFF"/><path d="M24 17h16v6H30v6h9v6h-9v10h-6V17Z" fill="#FFFFFF"/><circle cx="43" cy="17" r="4" fill="#30C7D9"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">System Forge Favicon</title>
+  <desc id="desc">Simplified favicon version of the System Forge mark.</desc>
+  <rect width="64" height="64" rx="14" fill="#F3F4F6"/>
+  <rect x="14" y="14" width="36" height="36" rx="8" fill="none" stroke="#111827" stroke-width="4" stroke-linejoin="round"/>
+  <circle cx="32" cy="32" r="5" fill="#111827"/>
+  <circle cx="32" cy="14" r="3" fill="#D97706"/>
+  <circle cx="50" cy="32" r="3" fill="#D97706"/>
+  <circle cx="32" cy="50" r="3" fill="#D97706"/>
+  <circle cx="14" cy="32" r="3" fill="#D97706"/>
+</svg>

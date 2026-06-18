@@ -1,0 +1,13 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1440' height='1024' viewBox='0 0 1440 1024'>
+  <rect width='1440' height='1024' fill='#F6F3ED'/>
+  <rect x='0' y='0' width='1440' height='80' fill='#151515'/>
+  <text x='24' y='42' fill='#F4EFE6' font-family='Inter, Arial, sans-serif' font-size='18' font-weight='700'>Billing</text>
+  <rect x='264' y='100' width='1152' height='44' rx='10' fill='#E8E1D7' stroke='#AFA79A'/>
+  <text x='280' y='128' fill='#4A453E' font-family='Inter, Arial, sans-serif' font-size='14'>Header / ações / busca</text>
+  <rect x='264' y='156' width='714' height='120' rx='12' fill='#FFFFFF' stroke='#C9C1B5'/>
+  <rect x='1024' y='156' width='391' height='220' rx='12' fill='#FFFFFF' stroke='#C9C1B5'/>
+  <rect x='264' y='292' width='714' height='120' rx='12' fill='#FFFFFF' stroke='#C9C1B5'/>
+  <text x='280' y='190' fill='#2F2A24' font-family='Inter, Arial, sans-serif' font-size='13'>Cards / formulário / tabela</text>
+  <text x='1040' y='190' fill='#2F2A24' font-family='Inter, Arial, sans-serif' font-size='13'>Painel lateral</text>
+  <rect x='24' y='976' width='1392' height='24' rx='12' fill='#D9D0C4'/>
+</svg>
